@@ -1,0 +1,41 @@
+:root{
+    --blue:#303090;
+}
+.NavContainer{
+    width: 100%;
+    height: 100px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+.domain_img{                    /* cllg logo */
+    width: 80px; 
+}
+.nav_common{                    /* left and right div of nav */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.domain_name{                   /* website/domain name */
+    font-size: 25px;
+    color: var(--blue);
+    padding: 0 5px;
+}
+.links{
+    font-size: 18px;
+    color: var(--blue);
+    margin: 0 5px;
+    cursor: pointer;
+}
+.button{                       /* login button */
+    font-size: 14px;
+    width: 50px;
+    height: 35px;
+    background-color: var(--blue);
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}

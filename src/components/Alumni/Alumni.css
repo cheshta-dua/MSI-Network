@@ -1,0 +1,40 @@
+.AlumniContainer{
+    /* background-color: rgb(229, 180, 117); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.AlumniHead{
+    font-size: 33px;
+    margin: 40px 0px 20px 0px;
+}
+.alumnidata{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.cardContainer{
+    width: 234px;
+    height: 300px;
+    margin: 20px 12px;
+    background-color: rgb(236, 236, 236);
+}
+.userImg{
+    width: 100%;
+    height: 75%;
+    background-color: rgb(188, 188, 188 );
+}
+.userDetail{
+    padding: 5px 10px;
+}
+.userName{
+    font-weight: 800;
+}
+.morebtn{
+    cursor: pointer;
+    border: 2px solid black;
+}
