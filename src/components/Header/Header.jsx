@@ -2,15 +2,15 @@ import "./header.css";
 const Header =()=>{
     return <>
     <div className="HeaderContainer">
-        <div className="header-text">
+        <div className="HeaderText">
             <div>
-                <h1>Welcome to MSI</h1>
+                <h1>Welcome to MSI Network!</h1>
             </div>
             <div>
                 <h3>Connect, engage and grow with students of Maharaja Surajmal Institute</h3>
             </div>
         </div>
-        <div className="header-illustration">
+        <div className="HeaderIllustration">
             <img src="images/illustration.png" alt="illustration"/>
         </div>
     </div>

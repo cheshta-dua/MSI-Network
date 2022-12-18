@@ -1,34 +1,36 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Nav.css";
-const Nav=() =>{
+const Nav = () => {
     const navigate = useNavigate();
-    const about= (e)=>{
+    const about = (e) => {
         e.preventDefault();
         navigate('/about-us');
     }
-    const login= (e)=>{
+    const login = (e) => {
         e.preventDefault();
         navigate('/login');
     }
-    return<>
+    return <>
         <div className="NavContainer">
-            <div className="Nav_domainName nav_common">
-                <div >
-                    <img src="images/Msi_logo.jpg" alt="domain" className="domain_img"/>
+            <div className="NavLeft">
+                <div>
+                    <img src="images/Msi_logo.png" alt="msi logo" className="DomainImg" />
                 </div>
                 <div>
-                    <h1 className="domain_name">MSI NETWORK</h1>
+                    <h1 className="DomainName">MSI Network</h1>
                 </div>
             </div>
-            <div className="Nav_links nav_common">
+            <div className="NavRight">
                 <div className="links">
                     Alumni
                 </div>
                 <div className="links" onClick={about}>
                     About Us
                 </div>
-                <div className="links">Reach Out</div>
+                <div className="links">
+                    Reach Out
+                </div>
                 <div className="links">
                     <button className="button" onClick={login}>
                         Login
