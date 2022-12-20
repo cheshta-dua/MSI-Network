@@ -1,8 +1,12 @@
-import React from "react";
+import React,{ useEffect, useState  }  from "react";
 import {useNavigate} from "react-router-dom";
 import "./Nav.css";
 const Nav=() =>{
     const navigate = useNavigate();
+
+    const [user,setUser]=useState({});
+    const [vis,setVis]=useState(false);
+
     const about= (e)=>{
         e.preventDefault();
         navigate('/about-us');
@@ -11,6 +15,24 @@ const Nav=() =>{
         e.preventDefault();
         navigate('/login');
     }
+    var u; 
+    useEffect(()=>{
+        var a=localStorage.getItem('User') || "[]";
+        // console.log("a ",a);
+        u=JSON.parse(a); 
+        setUser(u);
+    
+        if(a=="[]" || a ==null){
+            setVis(false);
+        }
+        else{
+            setVis(true);
+        }
+        
+    },[]);
+    
+    console.log("inside nav  ",user);
+    
     return<>
         <div className="NavContainer">
             <div className="Nav_domainName nav_common">
@@ -30,9 +52,10 @@ const Nav=() =>{
                 </div>
                 <div className="links">Reach Out</div>
                 <div className="links">
-                    <button className="button" onClick={login}>
+                    <button className="button" onClick={login} hidden={vis}>
                         Login
                     </button>
+                    <img src={user.picture} alt="user " hidden={!vis} height={"50px"} width={"50px"}/>
                 </div>
             </div>
         </div>
