@@ -44,6 +44,7 @@
     color: var(--blue);
     cursor: pointer;
     margin: 1.8vw;
+    text-decoration: none;
 }
 
 /* login button */

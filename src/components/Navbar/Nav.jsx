@@ -15,22 +15,22 @@ const Nav = () => {
         <div className="NavContainer">
             <div className="NavLeft">
                 <div>
-                    <img src="images/Msi_logo.png" alt="msi logo" className="DomainImg" />
+                    <img src="images/MSI_logo.png" alt="msi logo" className="DomainImg" />
                 </div>
                 <div>
                     <h1 className="DomainName">MSI Network</h1>
                 </div>
             </div>
             <div className="NavRight">
-                <div className="links">
+                <a href="#Alumni" className="links">
                     Alumni
-                </div>
+                </a>
                 <div className="links" onClick={about}>
                     About Us
                 </div>
-                <div className="links">
+                <a href="#ReachOut" className="links">
                     Reach Out
-                </div>
+                </a>
                 <div className="links">
                     <button className="button" onClick={login}>
                         Login
