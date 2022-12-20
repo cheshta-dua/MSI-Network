@@ -1,20 +1,25 @@
+
 import React,{ useEffect, useState  }  from "react";
 import {useNavigate} from "react-router-dom";
+
 import "./Nav.css";
-const Nav=() =>{
+const Nav = () => {
     const navigate = useNavigate();
+
 
     const [user,setUser]=useState({});
     const [vis,setVis]=useState(false);
 
     const about= (e)=>{
+
         e.preventDefault();
         navigate('/about-us');
     }
-    const login= (e)=>{
+    const login = (e) => {
         e.preventDefault();
         navigate('/login');
     }
+
     var u; 
     useEffect(()=>{
         var a=localStorage.getItem('User') || "[]";
@@ -34,23 +39,26 @@ const Nav=() =>{
     console.log("inside nav  ",user);
     
     return<>
+
         <div className="NavContainer">
-            <div className="Nav_domainName nav_common">
-                <div >
-                    <img src="images/Msi_logo.jpg" alt="domain" className="domain_img"/>
+            <div className="NavLeft">
+                <div>
+                    <img src="images/MSI_logo.png" alt="msi logo" className="DomainImg" />
                 </div>
                 <div>
-                    <h1 className="domain_name">MSI NETWORK</h1>
+                    <h1 className="DomainName">MSI Network</h1>
                 </div>
             </div>
-            <div className="Nav_links nav_common">
-                <div className="links">
+            <div className="NavRight">
+                <a href="#Alumni" className="links">
                     Alumni
-                </div>
+                </a>
                 <div className="links" onClick={about}>
                     About Us
                 </div>
-                <div className="links">Reach Out</div>
+                <a href="#ReachOut" className="links">
+                    Reach Out
+                </a>
                 <div className="links">
                     <button className="button" onClick={login} hidden={vis}>
                         Login

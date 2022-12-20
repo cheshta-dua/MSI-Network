@@ -1,8 +1,28 @@
 .HeaderContainer{
-    width: 100%;
-    height: 540px;
-    /* background-color: antiquewhite; */
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 2vw;
+}
+
+.HeaderText{
+    color: var(--blue);
+}
+
+.HeaderText h1{
+    text-align: left;
+    font-weight: 500;
+    font-size: 3vw;
+    padding-bottom: 0.5vw;
+}
+
+.HeaderText h3{
+    text-align: left;
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+.HeaderIllustration img {
+    width: 100%;
 }
