@@ -36,7 +36,7 @@ const Nav = () => {
         
     },[]);
     
-    console.log("inside nav  ",user);
+    // console.log("inside nav  ",user);
     
     return<>
 
