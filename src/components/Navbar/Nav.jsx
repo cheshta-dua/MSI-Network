@@ -5,7 +5,8 @@ import {useNavigate} from "react-router-dom";
 import "./Nav.css";
 const Nav = () => {
     const navigate = useNavigate();
-
+    console.log('current URL 👉️', window.location.href);
+console.log('current Pathname 👉️', window.location.pathname);
 
     const [user,setUser]=useState({});
     const [vis,setVis]=useState(false);
@@ -20,6 +21,7 @@ const Nav = () => {
         navigate('/login');
     }
 
+    //login button visibility
     var u; 
     useEffect(()=>{
         var a=localStorage.getItem('User') || "[]";
@@ -35,14 +37,19 @@ const Nav = () => {
         }
         
     },[]);
+
+    //from logo to home page navigate
+    const logoClickHandle=()=>{
+        navigate("/");
+    }
     
-    // console.log("inside nav  ",user);
+    
     
     return<>
 
         <div className="NavContainer">
             <div className="NavLeft">
-                <div>
+                <div onClick={()=>{logoClickHandle()}}>
                     <img src="images/MSI_logo.png" alt="msi logo" className="DomainImg" />
                 </div>
                 <div>
@@ -50,15 +57,19 @@ const Nav = () => {
                 </div>
             </div>
             <div className="NavRight">
-                <a href="#Alumni" className="links">
-                    Alumni
-                </a>
-                <div className="links" onClick={about}>
-                    About Us
-                </div>
-                <a href="#ReachOut" className="links">
-                    Reach Out
-                </a>
+                {window.location.pathname=="/Landing-page"
+                    ? <div className="search-box">
+                        <input type="text"/><span>Search Icon</span>
+                    </div>
+                    :<div className="NavRight-Left"> 
+                        <a href="#Alumni" onClick={()=>{logoClickHandle()}} className="links">
+                        Alumni
+                        </a>
+                        <div className="links" onClick={about}>About Us</div>
+                        <a href="#ReachOut" className="links">Reach Out</a> 
+                    </div>
+                }
+                
                 <div className="links">
                     <button className="button" onClick={login} hidden={vis}>
                         Login

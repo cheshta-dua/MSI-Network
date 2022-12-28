@@ -39,12 +39,31 @@
     font-family: 'Playfair Display', serif;
 }
 
+/* Nav other links like alumni about */
+.NavRight-Left{
+    display: flex;
+}
+
 .links {
     font-size: 1.4vw;
     color: var(--blue);
     cursor: pointer;
     margin: 1.8vw;
     text-decoration: none;
+}
+
+/* NAv searchBox */
+.search-box input{
+    width: 50vw;
+    height: 5.8vh;
+    margin: 0;
+}
+.search-box span{
+    border: 1px solid gray;
+    margin: 0%;
+    height: 100px;
+    width: 100px;
+    border-radius: 0 8px 8px 0;
 }
 
 /* login button */
