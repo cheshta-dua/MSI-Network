@@ -5,11 +5,10 @@ import { useState } from "react";
 const LandingPage=()=>{
     const [data,setData]=useState(alumniData);
     
-    
     return(
         <>
-            <Nav datafunc={setData}/>
-            <AlumniL data={data}/>
+            <Nav dataChangefunc={setData}/>
+            <AlumniL data={data} />
         </>
     )
 }

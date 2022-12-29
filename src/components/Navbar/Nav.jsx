@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AlumniL from "../Alumni_LandingPage/AlumniL";
 import { alumniData } from "../../data";
 import "./Nav.css";
-const Nav = (para) => {
+const Nav = ({dataChangefunc}) => {
     const navigate = useNavigate();
 
     //how to get url and pathname
@@ -63,17 +63,21 @@ const Nav = (para) => {
             );
         });
         if(FilterData.length !=0){
-            para.datafunc(FilterData);
+            console.log(typeof FilterData);
+            dataChangefunc(FilterData);
         }
         
     },[searchValue])
     //clear Filter btn
     const ClearFilter = () => {
         //changing to its normal value
-        para.datafunc(alumniData);
+        console.log(typeof alumniData);
+        dataChangefunc(alumniData);
         setSearchValue("");
         
     }
+    
+    // console.log("nav ",setData());
 
     return <>
 

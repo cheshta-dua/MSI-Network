@@ -3,6 +3,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     background-color: #FCFCFC;
+    /* box-sizing: border-box; */
 }
 
 :root {
