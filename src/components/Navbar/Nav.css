@@ -3,7 +3,6 @@
 * {
     font-family: 'Roboto', sans-serif;
     background-color: #FCFCFC;
-    /* box-sizing: border-box; */
 }
 
 :root {
@@ -23,6 +22,7 @@
 /* clg logo */
 .DomainImg {
     width: 70%;
+    cursor: pointer;
 }
 
 /* left and right div of nav */
@@ -41,7 +41,7 @@
 }
 
 /* Nav other links like alumni about */
-.NavRight-Left{
+.NavRight-Left {
     display: flex;
 }
 
@@ -53,18 +53,31 @@
     text-decoration: none;
 }
 
-/* NAv searchBox */
-.search-box input{
-    width: 50vw;
-    height: 5.8vh;
-    margin: 0;
+.search-box {
+    display: flex;
+    align-items: center;
 }
-.search-box span{
-    border: 1px solid gray;
-    margin: 0%;
-    height: 100px;
-    width: 100px;
-    border-radius: 0 8px 8px 0;
+
+/* Nav searchbar */
+.search-box input {
+    width: 500px;
+    height: 48px;
+    margin: 0;
+    padding: 0 8px;
+    position: relative;
+}
+
+.search-box input:focus {
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid #a3a3a3;
+    border-radius: 0;
+}
+
+.search-box i {
+    position: absolute;
+    right: 120px;
+    color: grey;
 }
 
 /* login button */

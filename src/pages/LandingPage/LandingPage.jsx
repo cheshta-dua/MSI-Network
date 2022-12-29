@@ -1,8 +1,8 @@
 import Nav from "../../components/Navbar/Nav";
 import { alumniData } from "../../data";
 import AlumniL from "../../components/Alumni_LandingPage/AlumniL";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 const LandingPage=()=>{
     const [data,setData]=useState(alumniData);
     useEffect(()=>{
@@ -10,10 +10,12 @@ const LandingPage=()=>{
     },[]);
     
     console.log("data a", data);
+
     return(
         <>
             <Nav dataChangefunc={setData}/>
-            <AlumniL data={data} />
+            <AlumniL data={data}/>
+
         </>
     )
 }
