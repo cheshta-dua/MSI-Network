@@ -1,5 +1,5 @@
 import "./Alumni.css";
-import Card from "./A_Card";
+import Card from "../AlumniCard/A_Card";
 import { alumniData } from "../../data";
 import { useState } from "react";
 const Alumni = () => {
