@@ -3,7 +3,7 @@ import Devs from "../../components/developers/Devs";
 const About= ()=>{
     return (
         <>
-            <Nav />
+            <Nav dataChangefunc={()=>{}}/>
             <Devs />
         </>
     )

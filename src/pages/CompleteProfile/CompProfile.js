@@ -3,7 +3,7 @@ import AddProfile from "../../components/AddProfile/AddProfile";
 const CompProfile= ()=>{
     return (
         <>
-            <Nav />
+            <Nav dataChangefunc={()=>{}}/>
             <AddProfile />
         </>
     )

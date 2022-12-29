@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
 import AlumniL from "../Alumni_LandingPage/AlumniL";
 import { alumniData } from "../../data";
 import "./Nav.css";
+
 const Nav = ({dataChangefunc}) => {
     const navigate = useNavigate();
 
@@ -51,32 +53,42 @@ const Nav = ({dataChangefunc}) => {
     }
 
     // filter logic
-    useEffect(()=>{
-        const FilterData = alumniData.filter((ele) => {
-            const searchTerm = searchValue.toLowerCase();
-            const fullName = ele.name.toLowerCase();
-            const company=ele.company.toLowerCase(); 
-            return (
-                searchTerm &&
-                fullName.startsWith(searchTerm) || company.startsWith(searchTerm) &&
-                fullName !== searchTerm 
-            );
-        });
-        if(FilterData.length !=0){
+    useEffect(() => {
+        var FilterData={};
+        if (searchValue.length !=0) {
+            FilterData = alumniData.filter((ele) => {
+                const searchTerm = searchValue.toLowerCase();
+                const fullName = ele.name.toLowerCase();
+                const company = ele.company.toLowerCase();
+                return (
+                    searchTerm &&
+                    fullName.startsWith(searchTerm) || company.startsWith(searchTerm) &&
+                    fullName !== searchTerm
+                );
+            });
+        }
+        
+        
+
+        if (FilterData.length != 0) {
             console.log(typeof FilterData);
             dataChangefunc(FilterData);
         }
-        
-    },[searchValue])
+        else {
+            console.log("not found");
+            
+        }
+
+    }, [searchValue]);
     //clear Filter btn
     const ClearFilter = () => {
         //changing to its normal value
         console.log(typeof alumniData);
         dataChangefunc(alumniData);
         setSearchValue("");
-        
+
     }
-    
+
 
 
     return <>
