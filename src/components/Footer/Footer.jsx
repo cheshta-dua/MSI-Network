@@ -1,7 +1,7 @@
 import "./footer.css";
 const Footer = () => {
     return (
-        <div className="pageFooter">
+        <div class="pageFooter">
             © 2022.
             {/* put github & e-mail links */}
         </div>
