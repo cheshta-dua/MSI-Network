@@ -77,7 +77,7 @@ const Nav = ({dataChangefunc}) => {
         
     }
     
-    // console.log("nav ",setData());
+
 
     return <>
 
