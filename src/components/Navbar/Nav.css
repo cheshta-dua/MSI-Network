@@ -64,6 +64,7 @@
     height: 48px;
     margin: 0;
     padding: 0 8px;
+    padding-left: 40px;
     position: relative;
 }
 
@@ -76,9 +77,18 @@
 
 .search-box i {
     position: absolute;
-    right: 120px;
     color: grey;
 }
+
+.search-icon {
+    right: 580px;
+}
+
+.clear {
+    right: 130px;
+    cursor: pointer;
+}
+
 
 /* login button */
 .button {
