@@ -1,6 +1,15 @@
-.pageFooter{
+.pageFooter {
     text-align: center;
-    padding-top: 3vw;
-    padding-bottom: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 4px;
     font-size: small;
+    border-top: 1px solid #f2f2f2;
+}
+
+.pageFooter p {
+    margin-bottom: 8px;
+}
+
+.pageFooter a{
+   padding: 4px;
 }

@@ -89,15 +89,3 @@
 .contactLinks a{
     padding: 4px;
 }
-
-.contactLinks a:active {
-    color: #202060;
-}
-
-.contactLinks a:visited {
-    color: var(--blue);
-}
-
-.contactLinks a:hover {
-    color: #7575B5;
-}
