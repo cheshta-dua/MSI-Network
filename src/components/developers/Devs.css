@@ -1,25 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
 .aboutContent {
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content:center;
+    margin-top: 2%;
+}
+
+.title {
+    color: var(--blue);
+}
+
+.title p {
+    padding-top: 4px;
+    color: #5D5D5D;
 }
 
 .profiles {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .profileContainer {
+    position: relative;
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;
+    margin: 0 24px;
+}
+
+.profileContainer h3 {
+    font-family: 'Gochi Hand', cursive;
+    color: #000;
+    font-size: 28px;
+}
+
+.profileFront, .profileBack {
+    position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: 1s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 3vw;
-    margin:3vw;
+    margin: 3vw;
 }
 
-.title {
+.profileContainer p {
+    text-align: center;
+}
+
+.profileFront {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    justify-content: center;
+}
+
+.profileBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    background-color: #f1f1ff;
+}
+
+.profileBack p {
+    line-height: 2vw;
+    background-color: transparent;
+}
+
+.profileContainer:hover .profileFront {
+    transform: rotateY(-180deg);
+}
+
+.profileContainer:hover .profileBack {
+    transform: rotateY(0deg);
+}
+
+.contactLinks{
+    margin-top: 16px;
+}
+
+.contactLinks a{
+    padding: 4px;
+}
+
+.contactLinks a:active {
+    color: #202060;
+}
+
+.contactLinks a:visited {
     color: var(--blue);
+}
+
+.contactLinks a:hover {
+    color: #7575B5;
 }
