@@ -99,7 +99,7 @@ const Nav = ({dataChangefunc}) => {
                 <div onClick={() => { logoClickHandle() }}>
                     <img src="images/MSI_logo.png" alt="msi logo" className="DomainImg" />
                 </div>
-                <div>
+                <div onClick={() => { logoClickHandle() }}>
                     <h1 className="DomainName">MSI Network</h1>
                 </div>
             </div>

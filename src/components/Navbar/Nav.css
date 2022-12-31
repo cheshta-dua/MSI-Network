@@ -38,6 +38,7 @@
     font-size: 2vw;
     color: var(--blue);
     font-family: 'Playfair Display', serif;
+    cursor: pointer;
 }
 
 /* Nav other links like alumni about */
