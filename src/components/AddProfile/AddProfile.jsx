@@ -11,7 +11,7 @@ const AddProfile = () => {
 
         <div className="addP-container">
             <div>
-                <h2 className="">Welcome, {user.name}!</h2>
+                <h2>Welcome, {user.name}!</h2>
                 <p class="subheading">Complete your profile to start networking</p>
             </div>
             <div>
@@ -41,10 +41,10 @@ const AddProfile = () => {
                         <label>
                             Headline of your profile:
                         </label>
-                        <input type="text" placeholder="where do you work?" />
+                        <input type="text" placeholder="where do you work?" required/>
                     </div>
                     <div>
-                        <button onClick={NextbtnHandle}>Next</button>
+                        <button type="submit" onClick={NextbtnHandle}>Next</button>
                     </div>
                 </form>
             </div>
