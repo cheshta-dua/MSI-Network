@@ -18,6 +18,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 16px;
+    margin-bottom: 24px;
 }
 
 .cardContainer {
@@ -28,6 +30,14 @@
     background-color: rgb(236, 236, 236);
 }
 
+.cardContainer {
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardContainer:hover {
+    transform: scale(1.1);
+}
+
 .userImg {
     width: 100%;
     height: 75%;
@@ -36,7 +46,7 @@
 
 .userDetail {
     padding: 5px 10px;
-    color: #5D5D5D
+    color: #5D5D5D;
 }
 
 .userName {
@@ -53,4 +63,8 @@
     cursor: pointer;
     padding: 1vw 2vw;
     margin-bottom: 4vw;
+}
+
+.morebtn:hover {
+    background-color: #202060;
 }

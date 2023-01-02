@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Roboto', sans-serif;
-    background-color: #FCFCFC;
+    /* background-color: #FCFCFC; */
 }
 
 :root {
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.2vw 0.5vw;
+    padding: 16px;
     /* position: fixed; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -38,6 +38,7 @@
     font-size: 2vw;
     color: var(--blue);
     font-family: 'Playfair Display', serif;
+    cursor: pointer;
 }
 
 /* Nav other links like alumni about */
@@ -64,6 +65,7 @@
     height: 48px;
     margin: 0;
     padding: 0 8px;
+    padding-left: 40px;
     position: relative;
 }
 
@@ -76,9 +78,18 @@
 
 .search-box i {
     position: absolute;
-    right: 120px;
     color: grey;
 }
+
+.search-icon {
+    right: 580px;
+}
+
+.clear {
+    right: 130px;
+    cursor: pointer;
+}
+
 
 /* login button */
 .button {
@@ -90,4 +101,20 @@
     border: 0;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.button:hover {
+    background-color: #202060;
+}
+
+a, a:visited {
+    color: var(--blue);
+}
+
+a:hover, .links:hover {
+    color: #7575B5;
+}
+
+a:active {
+    color: #202060;
 }

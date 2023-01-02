@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import AlumniL from "../Alumni_LandingPage/AlumniL";
 import { alumniData } from "../../data";
-// import SearchIcon from "@mui/icons-material/Search";
+import SearchIcon from "@mui/icons-material/Search";
 
 
 import "./Nav.css";
@@ -72,8 +72,6 @@ const Nav = ({dataChangefunc=""}) => {
                 );
             });
         }
-        
-        
 
         if (FilterData.length != 0) {
             console.log(typeof FilterData);
@@ -94,9 +92,6 @@ const Nav = ({dataChangefunc=""}) => {
         setSearchValue("");
     }
 
-
-
-
     return <>
 
         <div className="NavContainer">
@@ -104,7 +99,7 @@ const Nav = ({dataChangefunc=""}) => {
                 <div onClick={() => { logoClickHandle() }}>
                     <img src="images/MSI_logo.png" alt="msi logo" className="DomainImg" />
                 </div>
-                <div>
+                <div onClick={() => { logoClickHandle() }}>
                     <h1 className="DomainName">MSI Network</h1>
                 </div>
             </div>
@@ -113,7 +108,8 @@ const Nav = ({dataChangefunc=""}) => {
                 {window.location.pathname == "/Landing-page"
                     ? <div className="search-box">
                         <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e)=>{inputChange(e)}}/>
-                        <i onClick={()=>{ClearFilter()}}>Clear</i>
+                        <i class="search-icon"><SearchIcon /></i>
+                        <i class="clear" onClick={()=>{ClearFilter()}}>Clear</i>
                     </div>
                     : <div className="NavRight-Left">
                         <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
