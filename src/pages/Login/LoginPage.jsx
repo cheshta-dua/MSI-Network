@@ -3,7 +3,7 @@ import Nav from "../../components/Navbar/Nav";
 const LoginPage=()=>{
     return(
         <>
-            <Nav />
+            <Nav dataChangefunc={()=>{}}/>
            
             <Login />
         </>

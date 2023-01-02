@@ -11,7 +11,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import "./Nav.css";
 
 
-const Nav = ({dataChangefunc=""}) => {
+const Nav = ({dataChangefunc}) => {
     const navigate = useNavigate();
 
     // console.log('current URL 👉️', window.location.href);
