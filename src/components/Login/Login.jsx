@@ -18,6 +18,7 @@ const Login = () => {
                         <GoogleLogin
                             onSuccess={credentialResponse => {
                                 var userObject = jwt_decode(credentialResponse.credential);
+                                localStorage.removeItem('User');
                                 localStorage.setItem('User', JSON.stringify(userObject));
                                 navigate('/complete-your-profile');   //here we navigate to landing page if user name is found in db otherwise to complete-your-profile page
                             }}
