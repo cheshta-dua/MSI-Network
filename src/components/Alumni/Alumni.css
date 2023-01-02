@@ -27,7 +27,7 @@
     width: 234px;
     height: 300px;
     margin: 20px 12px;
-    background-color: rgb(236, 236, 236);
+    background-color: transparent;
 }
 
 .cardContainer {
@@ -41,7 +41,6 @@
 .userImg {
     width: 100%;
     height: 75%;
-    background-color: rgb(188, 188, 188);
 }
 
 .userDetail {

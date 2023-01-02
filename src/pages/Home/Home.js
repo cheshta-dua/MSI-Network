@@ -6,7 +6,7 @@ import ReachOut from "../../components/ReachOut/ReachForm";
 import Footer from "../../components/Footer/Footer";
 const Home= ()=>{
     return <>
-        <Nav />
+        <Nav dataChangefunc={()=>{}}/>
         <Header />
         <Alumni />
         <ReachOut />
