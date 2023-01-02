@@ -11,7 +11,7 @@ import { alumniData } from "../../data";
 import "./Nav.css";
 
 
-const Nav = ({dataChangefunc}) => {
+const Nav = ({dataChangefunc=""}) => {
     const navigate = useNavigate();
 
     // console.log('current URL 👉️', window.location.href);
