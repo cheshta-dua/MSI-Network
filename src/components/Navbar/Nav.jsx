@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
-
-import AlumniL from "../Alumni_LandingPage/AlumniL";
 import { alumniData } from "../../data";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -105,11 +103,16 @@ const Nav = ({dataChangefunc}) => {
             </div>
 
             <div className="NavRight">
-                {window.location.pathname == "/Landing-page"
-                    ? <div className="search-box">
+                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
+                    ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
+                        <div className="links" onClick={()=> navigate('/Landing-page')}>Alumni</div>
+                        <div className="links" onClick={()=> navigate('/faculty')}>Faculty</div>
+                        <div className="links" >College</div>
+                        <div className="search-box">
                         <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e)=>{inputChange(e)}}/>
                         <i class="search-icon"><SearchIcon /></i>
                         <i class="clear" onClick={()=>{ClearFilter()}}>Clear</i>
+                        </div>
                     </div>
                     : <div className="NavRight-Left">
                         <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
