@@ -46,9 +46,11 @@ const AddProfile = () => {
                                     Batch:
                                 </label>
                                 <select value={batch} onChange={(e)=>setBatch(e.target.value)} placeholder="2016-2019" required>
-                                    <option selected>2017-2020</option>
+                                    <option selected>2018-2021</option>
+                                    <option >2017-2020</option>
                                     <option>2016-2019</option>
                                     <option>2015-2018</option>
+                                    
                                 </select>
                             </div>
                         </div>

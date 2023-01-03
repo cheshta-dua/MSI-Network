@@ -1,4 +1,4 @@
-import A_Card from "../AlumniCard/A_Card";
+import A_Card from "../Card/A_Card";
 import "./AlumniL.css";
 const AlumniL =( {data})=>{
     

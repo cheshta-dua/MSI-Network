@@ -6,6 +6,7 @@ import Login from "./pages/Login/LoginPage";
 import CompProfile from "./pages/CompleteProfile/CompProfile";
 import ResumeAdd from "./pages/UploadResume/ResumeAdd";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import FacultyPage from "./pages/FacultyPage/FacultyPage";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
       <Route path="/complete-your-profile" element={<CompProfile/>}/>
       <Route path="/upload-resume-page" element={<ResumeAdd />}/>
       <Route path="/Landing-page" element={<LandingPage />}/>
+      <Route path="/faculty" element={< FacultyPage />}/>
       </Routes>
     </BrowserRouter>
   );

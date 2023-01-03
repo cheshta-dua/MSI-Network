@@ -1,0 +1,14 @@
+
+.faculty-container{
+    width: 100vw;
+  
+}
+.faculty-container h1{
+    text-align: center;
+}
+.faculty-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
