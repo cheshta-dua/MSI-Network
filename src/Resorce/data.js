@@ -4,7 +4,6 @@ export const  alumniData=[
         name:"Anjali Verma",
         Batch:"2016-2019",
         company:"Zepto",
-        email:"acgfr@gmail.com"
     },
     {
         id:2,
@@ -17,7 +16,6 @@ export const  alumniData=[
         name:"Arnav Kapoor",
         Batch:"2020-2023",
         company:"Google",
-        email:"acgfr@gmail.com"
     },
     {
         id:4,
@@ -30,7 +28,6 @@ export const  alumniData=[
         name:"Rohan Singh",
         Batch:"2015-2018",
         company:"Microsoft",
-        email:"acgfr@gmail.com"
     },
     {
         id:6,

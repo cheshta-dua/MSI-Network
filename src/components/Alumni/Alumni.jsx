@@ -1,6 +1,6 @@
 import "./Alumni.css";
 import Card from "./A_Card";
-import { alumniData } from "../../data";
+import { alumniData } from "../../Resorce/data";
 import { useState } from "react";
 const Alumni = () => {
     const [visible, setvisible] = useState(10);

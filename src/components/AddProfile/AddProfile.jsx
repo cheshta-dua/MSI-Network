@@ -12,7 +12,7 @@ const AddProfile = () => {
     const NextbtnHandle = () => {
         // navigate to other page when these fileds are not empty
         if(course !== "" && batch !== "" && company !== ""){
-            navigate('/upload-resume-page');
+            navigate('/Landing-page');
         }
         else{
             alert("Kindly fill all the informations.");
@@ -60,6 +60,12 @@ const AddProfile = () => {
                             </label>
                             <input type="text" placeholder="where do you work?" required value={company} onChange={(e)=>setCompany(e.target.value)} />
                         </div>
+                        <label htmlFor="">Current Company Designation:</label>
+                    <input type="text" placeholder="Designation"/> <br />
+                    <label htmlFor="">Past Company Designation:</label>
+                    <input type="text" placeholder="Designation"/> <br />
+                    <label htmlFor="">LinkedIn:</label>
+                    <input type="url" placeholder="Url"/> <br />
                         <div>
                             <button type="submit" onClick={NextbtnHandle}>Next</button>
                         </div>

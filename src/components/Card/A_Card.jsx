@@ -4,7 +4,7 @@ const A_Card =(props)=>{
     const [show,setShow]=useState(false);
     
     const {key,para}= props;
-    const {name,company,gitUrl=null,LinkedinUrl=null,email=null}=para;
+    const {name,company,gitUrl=null,LinkedinUrl=null,email=null,image=null,Designation=null}=para;
     useEffect(()=>{
         if(email===null){
             setShow(false);
@@ -16,11 +16,13 @@ const A_Card =(props)=>{
     console.log("name: ",name,props);
     return <>
     <div className="cardContainer" key={key}>
-        <div className="userImg"></div>
+        <div className="userImg">
+            <img src={image} alt="alumnus" style={{width:"100%",height:"100%"}}/>
+        </div>
         <div className="userDetail">
             <div className="userName">{name}</div>
             <div className="userCompany">
-                <div>{company}</div>
+                <div>{show?Designation:company}</div>
                 <div>
                     {show?<a href={"mailto:" + email}>Email</a>:null} 
                     {!show? 

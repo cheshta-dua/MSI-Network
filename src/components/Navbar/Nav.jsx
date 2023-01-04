@@ -2,14 +2,14 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
-import { alumniData } from "../../data";
+import { alumniData } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
 
 
 import "./Nav.css";
 
 
-const Nav = ({dataChangefunc}) => {
+const Nav = ({dataChangefunc=""}) => {
     const navigate = useNavigate();
 
     // console.log('current URL 👉️', window.location.href);

@@ -1,5 +1,5 @@
 import Nav from "../../components/Navbar/Nav";
-import { alumniData } from "../../data";
+import { alumniData } from "../../Resorce/data";
 import AlumniL from "../../components/Alumni_LandingPage/AlumniL";
 import { useState, useEffect } from "react";
 
