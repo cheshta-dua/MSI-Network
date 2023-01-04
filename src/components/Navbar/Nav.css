@@ -118,3 +118,22 @@ a:hover, .links:hover {
 a:active {
     color: #202060;
 }
+ /* login and logout css */
+
+.loginbtn{
+    position:relative;
+}
+.logoutbtn{
+    position: absolute;
+    display: none;
+    font-size: 16px;
+    width: 5vw;
+    height: 2vw;
+    background-color: #b0b0b0;
+    text-align: center;
+    
+}
+.loginbtn:hover .logoutbtn{
+    display: block;
+    color: #202060; 
+}

@@ -27,7 +27,12 @@ const Nav = ({dataChangefunc=""}) => {
         e.preventDefault();
         navigate('/login');
     }
-
+    //logout button handle
+    const logoutHandle=()=>{
+        setUser({});
+        navigate('/');
+        localStorage.removeItem('User');
+    }
     //login button visibility
     var u;
     useEffect(() => {
@@ -106,7 +111,7 @@ const Nav = ({dataChangefunc=""}) => {
                 {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={()=> navigate('/Landing-page')}>Alumni</div>
-                        <div className="links" onClick={()=> navigate('/faculty')}>Faculty</div>
+                        <div className="links facu" onClick={()=> navigate('/faculty')}>Faculty</div>
                         <div className="links" >College</div>
                         <div className="search-box">
                         <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e)=>{inputChange(e)}}/>
@@ -123,11 +128,14 @@ const Nav = ({dataChangefunc=""}) => {
                     </div>
                 }
 
-                <div className="links">
+                <div className="links loginbtn">
                     <button className="button" onClick={login} hidden={vis}>
                         Login
                     </button>
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
+                    <div  className="logoutbtn" onClick={()=> logoutHandle()} style={{visibility: vis?"visible":"hidden"}}>
+                        Log Out
+                    </div>
                 </div>
             </div>
         </div>
