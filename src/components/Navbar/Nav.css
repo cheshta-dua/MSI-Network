@@ -129,13 +129,12 @@ a:active {
     display: none;
     font-size: 16px;
     width: 5vw;
-    height: 2vw;
-    background-color: #b0b0b0;
-    text-align: center;
-
+    /* height: 2vw; */
+    padding: 8px;
 }
 
 .loginbtn:hover .logoutbtn {
     display: block;
-    color: #202060;
+    color: #ff0000;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
