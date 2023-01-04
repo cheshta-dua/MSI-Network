@@ -61,7 +61,7 @@
 
 /* Nav searchbar */
 .search-box input {
-    width: 500px;
+    width: 400px;
     height: 48px;
     margin: 0;
     padding: 0 8px;
@@ -82,7 +82,7 @@
 }
 
 .search-icon {
-    right: 580px;
+    right: 490px;
 }
 
 .clear {
