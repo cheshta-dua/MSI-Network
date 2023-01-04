@@ -29,16 +29,11 @@ button {
 }
 
 .profileForm {
-    
     font-size: 1.3vw;
     padding: 2vw 0;
     display: flex;
     align-items: center;
-    justify-content:space-between;
-}
-
-.formData{
-    width: 65%;
+    justify-content: space-between;
 }
 
 select, input {
@@ -47,31 +42,25 @@ select, input {
     border: 2px solid #D9D9D9;
     border-radius: 4px;
     background-color: #fff;
-    margin: 8px;
+    margin: 12px 8px;
 }
 
-input {
-    width: 20%;
+input{
+    padding: 4px;
+    width: 100%;
+    margin-right: 200px;
 }
 
-.details1 {
-    display: flex;
-    justify-content: space-between;
-    width: 35%;
-    margin-bottom: 0.5vw;
-}
-
-.details2 {
-    margin-bottom: 1vw;
-}
 /* Img styling*/
-.formImg{
+.formImg {
     width: 35%;
 }
-.formImg img{
-    width:10vw;
+
+.formImg img {
+    width: 10vw;
     margin: 0 0 0 4vw;
 }
-.chhosebtn{
+
+.choosebtn {
     width: 16vw;
 }
