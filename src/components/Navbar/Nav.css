@@ -122,6 +122,7 @@ a:active {
 
 .loginbtn{
     position:relative;
+    transition: all 1s;
 }
 .logoutbtn{
     position: absolute;
@@ -131,9 +132,10 @@ a:active {
     height: 2vw;
     background-color: #b0b0b0;
     text-align: center;
-    
+    transition: all 1s;
 }
 .loginbtn:hover .logoutbtn{
     display: block;
     color: #202060; 
+    transition: all 1s;
 }
