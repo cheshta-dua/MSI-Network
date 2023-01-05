@@ -123,9 +123,9 @@ const Nav = ({ dataChangefunc = "" }) => {
                         </div>
                     </div>
                     : <div className="NavRight-Left">
-                        <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
+                        {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
                             Alumni
-                        </a>
+                        </a> */}
                         <div className="links" onClick={about}>About Us</div>
                         <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                     </div>
@@ -168,7 +168,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                     <div className="NavRight-mobile">
                         {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
                             ? <div className="NavRight-Left">
-                                <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
+                                {/* <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div> */}
                                 <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                                 <div className="links" >College</div>
                                 <div className="search-box">
@@ -178,9 +178,9 @@ const Nav = ({ dataChangefunc = "" }) => {
                                 </div>
                             </div>
                             : <div className="NavRight-Left-mobile">
-                                <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
+                                {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
                                     Alumni
-                                </a>
+                                </a> */}
                                 <div className="links" onClick={about}>About Us</div>
                                 <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                             </div>

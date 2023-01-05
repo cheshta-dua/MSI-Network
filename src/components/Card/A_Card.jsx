@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../Alumni_HomePage/Alumni.css";
+import "./card.css";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 const A_Card = (props) => {
