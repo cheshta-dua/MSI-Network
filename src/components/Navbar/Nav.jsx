@@ -1,11 +1,9 @@
-
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
 import { alumniData } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
-
-
+import MenuIcon from "@mui/icons-material/Menu";
 import "./Nav.css";
 
 
@@ -18,6 +16,10 @@ const Nav = ({ dataChangefunc = "" }) => {
     const [user, setUser] = useState({});
     const [vis, setVis] = useState(false);
     const [searchValue, setSearchValue] = useState("");
+<<<<<<< HEAD
+=======
+    const [menuOpen, setMenuOpen] = useState(false);
+>>>>>>> ad6b2a7eac53784cfaee83dfce4c939aacd2dc40
     const about = (e) => {
 
         e.preventDefault();
@@ -108,11 +110,19 @@ const Nav = ({ dataChangefunc = "" }) => {
             </div>
 
             <div className="NavRight">
+<<<<<<< HEAD
                 {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/college"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                         <div className="links" onClick={() => navigate('/college')}>College</div>
+=======
+                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
+                    ? <div className="NavRight-Left">
+                        <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
+                        <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
+                        <div className="links" >College</div>
+>>>>>>> ad6b2a7eac53784cfaee83dfce4c939aacd2dc40
                         <div className="search-box">
                             <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
                             <i class="search-icon"><SearchIcon /></i>
@@ -133,6 +143,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                         Login
                     </button>
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
+<<<<<<< HEAD
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
                         <div onClick={() => logoutHandle()}  >
                             Log Out
@@ -140,8 +151,61 @@ const Nav = ({ dataChangefunc = "" }) => {
                         <div className=" profle" >
                             Profile
                         </div>
+=======
+                    <div className="logoutbtn" onClick={() => logoutHandle()} style={{ visibility: vis ? "visible" : "hidden" }}>
+                        Log Out
+>>>>>>> ad6b2a7eac53784cfaee83dfce4c939aacd2dc40
                     </div>
                     
+                </div>
+            </div>
+        </div>
+
+        <div className="navbar-mobile">
+            <div className="NavLeft-mobile">
+                <div onClick={() => { logoClickHandle() }}>
+                    <img src="images/MSI_logo.png" alt="msi logo" className="DomainImg" />
+                </div>
+                <div onClick={() => { logoClickHandle() }}>
+                    <h1 className="DomainName">MSI Network</h1>
+                </div>
+            </div>
+            <div class="sidePanel">
+                <div className="navbar__hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                    <MenuIcon />
+                </div>
+                <div className="navbar__menu" style={{ display: menuOpen ? 'block' : 'none' }}>
+                    <div className="NavRight-mobile">
+                        {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
+                            ? <div className="NavRight-Left">
+                                <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
+                                <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
+                                <div className="links" >College</div>
+                                <div className="search-box">
+                                    <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
+                                    <i class="search-icon"><SearchIcon /></i>
+                                    <i class="clear" onClick={() => { ClearFilter() }}>Clear</i>
+                                </div>
+                            </div>
+                            : <div className="NavRight-Left-mobile">
+                                <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
+                                    Alumni
+                                </a>
+                                <div className="links" onClick={about}>About Us</div>
+                                <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
+                            </div>
+                        }
+
+                        <div className="links loginbtn">
+                            <button className="button" onClick={login} hidden={vis}>
+                                Login
+                            </button>
+                            <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
+                            <div className="logoutbtn" onClick={() => logoutHandle()} style={{ visibility: vis ? "visible" : "hidden" }}>
+                                Log Out
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
