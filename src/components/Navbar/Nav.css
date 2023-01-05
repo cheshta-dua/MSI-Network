@@ -119,9 +119,11 @@ a:active {
     color: #202060;
 }
 
+
 /* login and logout css */
 .loginbtn {
     position: relative;
+
 }
 
 .logoutbtn {
@@ -129,12 +131,15 @@ a:active {
     display: none;
     font-size: 16px;
     width: 5vw;
+
     /* height: 2vw; */
     padding: 8px;
+
 }
 
 .loginbtn:hover .logoutbtn {
     display: block;
+
     color: #ff0000;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
