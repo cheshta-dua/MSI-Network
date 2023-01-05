@@ -1,26 +1,28 @@
 import "./college.css";
-const CollegeComp=()=>{
-    return(
+const CollegeComp = () => {
+    return (
         <>
-        <div className="cllg-container">
-            <div className="cllg-content">
-                <h1>About Maharaja Surajmal Institute</h1>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt id recusandae sequi maxime aliquid! Praesentium est, reiciendis dolore obcaecati laborum aspernatur odio placeat cupiditate in maxime alias, totam qui quaerat.
-                    Nostrum dolore culpa hic optio et ea eum. Quia id facilis molestiae, ullam sed quasi ipsa, suscipit delectus nobis assumenda dicta in ratione vitae odio dolores aliquid rem ipsum distinctio.
-                    Est architecto accusantium numquam quo dolorem tempore adipisci officia laboriosam, placeat impedit voluptates sequi libero in explicabo nam ipsum assumenda voluptatem consequuntur doloribus. Repellat amet tempore tempora eos aut repellendus?
-                    Nulla doloremque consequatur iure quod, labore error laborum ut magnam autem sapiente saepe commodi? Blanditiis fugit aspernatur temporibus ratione quo, assumenda explicabo consectetur dolores totam doloribus accusantium molestiae veniam nesciunt.
-                    Incidunt iusto architecto ipsum a nulla quas saepe ab consequatur blanditiis eos laboriosam esse consequuntur reiciendis, voluptas eum quo ea ducimus, temporibus facilis natus! Modi vel ducimus ipsam voluptas error.
-                    Maxime tempora aliquid velit veniam officiis quisquam expedita ex asperiores qui quibusdam cupiditate nulla minima maiores aperiam explicabo dolorum repellendus dignissimos ratione, sit amet? Tenetur nesciunt praesentium tempore aliquid tempora?
-                    Ab dignissimos sequi alias quas, quis nobis quae explicabo incidunt dicta nesciunt ullam ut nulla dolores eveniet delectus aut asperiores possimus cupiditate optio reprehenderit? Voluptatum assumenda consequuntur soluta numquam natus.
-                    Beatae corrupti ipsa laudantium error expedita earum sunt quas amet deserunt nihil, molestias quod soluta, voluptatum fuga qui. Iste consequuntur sequi provident cum autem, enim ea libero aliquid fuga hic.
-                </p>
-            </div>
+            <div className="clg-container">
+                <div className="clg-content">
+                    <h1>About Maharaja Surajmal Institute</h1>
+                    <p>
+                        Maharaja Surajmal Institute was established in year 1999 with aim to propagate quality professional education to young generation by adopting innovative and creative methodology. The Institute has been established by dedicated and selfless endeavours of educationists and social workers who are deeply concerned with the standards of education and are deeply concerned with the standards of education and are determined to upgrade the quality, content and direction of education. Under guidance of Hon’ble president Shri Kaptan Singh, the institute aims to reach new heights in field of higher education.
+                    </p>
+                    <p>
+                        One of the most preferred institutes by the students in GGSIPU, the Institute boasts of a sprawling lush green campus of 8 acres, well equipped library, qualified and experienced staff, state of art infrastructure and robust teaching pedagogy. With highly sought after courses like BBA, B.Com, BCA and B.Ed, the Institute aims to empower minds that are able to conceive creative ideas and identify innovative solutions to the problems. In terms of placement, MSI boasts of not only a steady stream of campus recruiters but we have also assurances for future tie-ups and recruitment opportunities for our students. In the year 2018, 573 campus placements and in the year 2017, 385 under-graduate BBA and BCA students have been placed in reputed organizations. To ensure that our students get placed well in big organizations, placement team and faculty members organize various pre-placement activities like Group discussions, Mock interviews etc.
+                    </p>
+                    <p>
+                        MSI has a well stacked Central Library containing more than 27892 volumes, 85 national and international journals (printed), periodicals, magazines and newspapers. On-line journals totaled 3863 & E-Book are 1257. MSI has an Intellectual capital comprising of 74 faculty members with 40 Ph.D. and 21 M.Phil., 10 M.Tech., 32 UGC NET, 07 Ph.D. (Pursuing) dedicated to facilitate acquisition of conceptual understanding, skills and requisite behavioral qualities to groom students into tomorrow’s Global Professionals.
+                    </p>
+                    <p>
+                        Visit the official website <a href="https://www.msijanakpuri.com/" target="_blank">by clicking here. </a>
+                    </p>
+                </div>
 
-            <div className="cllg-img-container">
-                {/* img */}
+                <div className="clg-img-container">
+                    {<img src="https://www.msijanakpuri.com/wp-content/uploads/2020/02/PicCollageMaker_2020131920306.jpg"></img>}
+                </div>
             </div>
-        </div>        
         </>
     )
 }
