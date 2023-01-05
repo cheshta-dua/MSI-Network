@@ -61,7 +61,7 @@
 
 /* Nav searchbar */
 .search-box input {
-    width: 500px;
+    width: 400px;
     height: 48px;
     margin: 0;
     padding: 0 8px;
@@ -82,7 +82,7 @@
 }
 
 .search-icon {
-    right: 580px;
+    right: 490px;
 }
 
 .clear {
@@ -118,24 +118,29 @@ a:hover, .links:hover {
 a:active {
     color: #202060;
 }
- /* login and logout css */
 
-.loginbtn{
-    position:relative;
-    transition: all 1s;
+
+/* login and logout css */
+.loginbtn {
+    position: relative;
+
 }
-.logoutbtn{
+
+.logoutbtn {
     position: absolute;
     display: none;
     font-size: 16px;
     width: 5vw;
-    height: 2vw;
-    background-color: #b0b0b0;
-    text-align: center;
-    transition: all 1s;
+
+    /* height: 2vw; */
+    padding: 8px;
+
 }
-.loginbtn:hover .logoutbtn{
+
+.loginbtn:hover .logoutbtn {
     display: block;
-    color: #202060; 
-    transition: all 1s;
+
+    color: #ff0000;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+

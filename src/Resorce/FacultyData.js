@@ -2,7 +2,7 @@ export const  facultyData=[
     {
         id:1,
         name:"Dr. J. P. Singh",
-        Designation:"Senior Professor & Editor-MSIJAR",
+        Designation:"Senior Professor",
         email:"jpsingh@msi-ggsip.org",
         image:"https://www.msijanakpuri.com/wp-content/uploads/2019/10/16-500x500.jpg"
     },
@@ -23,7 +23,7 @@ export const  facultyData=[
     {
         id:4,
         name:"Dr. Amit Choudhary",
-        Designation:"Associate Professor & Dy. Director",
+        Designation:"Associate Professor",
         email:"amitchoudhary@msijanakpuri.com",
         image:"https://www.msijanakpuri.com/wp-content/uploads/2019/10/6-500x500.jpg"
     },
@@ -79,7 +79,7 @@ export const  facultyData=[
     {
         id:12,
         name:"Dr. Menal Dahiya",
-        Designation:"Associate Professor & Head",
+        Designation:"Associate Professor",
         email:"menaldahiya@msijanakpuri.com",
         image:"https://www.msijanakpuri.com/wp-content/uploads/2019/10/18-500x500.jpg"
     },
@@ -93,7 +93,7 @@ export const  facultyData=[
     {
         id:14,
         name:"Dr. Supriya Choudhary",
-        Designation:"Associate Professor & Head",
+        Designation:"Associate Professor",
         email:"supriyachoudhary@msijanakpuri.com",
         image:"https://www.msijanakpuri.com/wp-content/uploads/2019/10/46-500x500.jpg"
     },
@@ -107,7 +107,7 @@ export const  facultyData=[
     {
         id:16,
         name:"Dr. Anita Sharma",
-        Designation:"Associate Professor & Head",
+        Designation:"Associate Professor",
         email:"anitasharma@msijanakpuri.com",
         image:"https://www.msijanakpuri.com/wp-content/uploads/2019/10/59-500x500.jpg"
     },
@@ -135,14 +135,14 @@ export const  facultyData=[
     {
         id:20,
         name:"Dr. Poonam Beniwal",
-        Designation:"Assistant Professor & Head",
+        Designation:"Assistant Professor",
         email:"poonambeniwal@msijanakpuri.com",
         image:"https://www.msijanakpuri.com/wp-content/uploads/IMG_2529-500x500.jpeg"
     },
     {
         id:21,
         name:"Dr. Neetu Anand",
-        Designation:"Assistant Professor & Head",
+        Designation:"Assistant Professor",
         email:"neetuanand@msijanakpuri.com",
         image:"https://www.msijanakpuri.com/wp-content/uploads/2019/10/15-500x500.jpg"
     },
@@ -163,7 +163,7 @@ export const  facultyData=[
     {
         id:24,
         name:"Dr. Kumar Gaurav",
-        Designation:"Assistant Professor & TPO",
+        Designation:"Assistant Professor",
         email:"kumargaurav@msijanakpuri.com",
         image:"https://www.msijanakpuri.com/wp-content/uploads/2019/10/1-500x500.jpg"
     },
