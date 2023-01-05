@@ -6,7 +6,7 @@ import Login from "./pages/Login/LoginPage";
 import CompProfile from "./pages/CompleteProfile/CompProfile";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import FacultyPage from "./pages/FacultyPage/FacultyPage";
-import CollegePage from "./pages/abtCollege/College";
+// import CollegePage from "./pages/abtCollege/College";
 function App() {
   return (
     <BrowserRouter>
@@ -17,7 +17,7 @@ function App() {
       <Route path="/complete-your-profile" element={<CompProfile/>}/>
       <Route path="/Landing-page" element={<LandingPage />}/>
       <Route path="/faculty" element={< FacultyPage />}/>
-      <Route path="/college" element={<CollegePage />}/>
+      {/* <Route path="/college" element={<CollegePage />}/> */}
       </Routes>
     </BrowserRouter>
   );

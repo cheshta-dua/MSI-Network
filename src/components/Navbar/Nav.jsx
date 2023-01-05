@@ -114,7 +114,6 @@ const Nav = ({ dataChangefunc = "" }) => {
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
-                        <div className="links" onClick={() => navigate('/college')}>College</div>
 
                         <div className="search-box">
                             <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
@@ -126,6 +125,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                         {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
                             Alumni
                         </a> */}
+                        <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
                         <div className="links" onClick={about}>About Us</div>
                         <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                     </div>

@@ -2,7 +2,7 @@ import "./college.css";
 const CollegeComp = () => {
     return (
         <>
-            <div className="clg-container">
+            <div className="clg-container" id="AbtClg">
                 <div className="clg-content">
                     <h1>About Maharaja Surajmal Institute</h1>
                     <p>
