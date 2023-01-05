@@ -1,0 +1,17 @@
+.cllg-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cllg-img-container{
+    width: 29%;
+    height: 200px;
+    background-color: gray;
+    margin: 30px;  /*u can remove it*/
+}
+.cllg-content{
+    width: 70%;
+    padding: 20px 30px;
+}

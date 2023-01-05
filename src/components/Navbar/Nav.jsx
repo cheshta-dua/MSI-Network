@@ -9,7 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import "./Nav.css";
 
 
-const Nav = ({dataChangefunc=""}) => {
+const Nav = ({ dataChangefunc = "" }) => {
     const navigate = useNavigate();
 
     // console.log('current URL 👉️', window.location.href);
@@ -17,7 +17,7 @@ const Nav = ({dataChangefunc=""}) => {
 
     const [user, setUser] = useState({});
     const [vis, setVis] = useState(false);
-    const[searchValue,setSearchValue]=useState("");
+    const [searchValue, setSearchValue] = useState("");
     const about = (e) => {
 
         e.preventDefault();
@@ -28,7 +28,7 @@ const Nav = ({dataChangefunc=""}) => {
         navigate('/login');
     }
     //logout button handle
-    const logoutHandle=()=>{
+    const logoutHandle = () => {
         setUser({});
         navigate('/');
         localStorage.removeItem('User');
@@ -62,8 +62,8 @@ const Nav = ({dataChangefunc=""}) => {
 
     // filter logic
     useEffect(() => {
-        var FilterData=[];
-        if (searchValue.length !=0) {
+        var FilterData = [];
+        if (searchValue.length != 0) {
             FilterData = alumniData.filter((ele) => {
                 const searchTerm = searchValue.toLowerCase();
                 const fullName = ele.name.toLowerCase();
@@ -79,11 +79,11 @@ const Nav = ({dataChangefunc=""}) => {
         if (FilterData.length != 0) {
             console.log(typeof FilterData);
             dataChangefunc(FilterData);
-            
+
         }
         else {
             console.log("not found");
-            
+
         }
 
     }, [searchValue]);
@@ -108,15 +108,15 @@ const Nav = ({dataChangefunc=""}) => {
             </div>
 
             <div className="NavRight">
-                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
+                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/college"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
-                        <div className="links" onClick={()=> navigate('/Landing-page')}>Alumni</div>
-                        <div className="links facu" onClick={()=> navigate('/faculty')}>Faculty</div>
-                        <div className="links" >College</div>
+                        <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
+                        <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
+                        <div className="links" onClick={() => navigate('/college')}>College</div>
                         <div className="search-box">
-                        <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e)=>{inputChange(e)}}/>
-                        <i class="search-icon"><SearchIcon /></i>
-                        <i class="clear" onClick={()=>{ClearFilter()}}>Clear</i>
+                            <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
+                            <i class="search-icon"><SearchIcon /></i>
+                            <i class="clear" onClick={() => { ClearFilter() }}>Clear</i>
                         </div>
                     </div>
                     : <div className="NavRight-Left">
@@ -133,9 +133,15 @@ const Nav = ({dataChangefunc=""}) => {
                         Login
                     </button>
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
-                    <div  className="logoutbtn" onClick={()=> logoutHandle()} style={{visibility: vis?"visible":"hidden"}}>
-                        Log Out
+                    <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
+                        <div onClick={() => logoutHandle()}  >
+                            Log Out
+                        </div>
+                        <div className=" profle" >
+                            Profile
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
