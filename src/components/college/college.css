@@ -1,13 +1,13 @@
 .clg-container {
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 24px;
 }
 
 .clg-img-container {
-    width: 30%;
+    width: 35%;
 }
 
 .clg-img-container img{
