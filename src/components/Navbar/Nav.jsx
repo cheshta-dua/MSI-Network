@@ -170,7 +170,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                             ? <div className="NavRight-Left">
                                 <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                                 <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
-                                <div className="links" >College</div>
+                                <div className="links" onClick={() => navigate('/college')}>College</div>
                                 <div className="search-box">
                                     <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
                                     <i class="search-icon"><SearchIcon /></i>
