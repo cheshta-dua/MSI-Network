@@ -1,28 +1,63 @@
-.HeaderContainer{
+.HeaderContainer {
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 2vw;
+    padding: 24px;
 }
 
-.HeaderText{
+.HeaderText {
     color: var(--blue);
 }
 
-.HeaderText h1{
+.HeaderText h1 {
     text-align: left;
     font-weight: 500;
-    font-size: 3vw;
-    padding-bottom: 0.5vw;
+    font-size: 40px;
 }
 
-.HeaderText h3{
+.HeaderText h3 {
     text-align: left;
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 24px;
+    margin: 4px 0;
 }
 
 .HeaderIllustration img {
     width: 100%;
 }
+
+@media only screen and (max-width: 800px) {
+    .HeaderContainer {
+        flex-direction: column-reverse;
+        padding: 16px;
+        justify-content: start;
+        height: 100vh;
+    }
+
+    .HeaderText h1, .HeaderText h3 {
+        text-align: center;
+    }
+
+    .HeaderText h1 {
+        font-size: 32px;
+        margin-bottom: 4px;
+    }
+
+    .HeaderText h3 {
+        font-size: 20px;
+    }
+
+    .HeaderIllustration img {
+        width: 80vh;
+    }
+
+    .HeaderIllustration img {
+        margin-bottom: 2%;
+    }
+
+}
+
+/* @media only screen and (max-width: 390px){
+    
+} */

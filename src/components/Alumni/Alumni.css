@@ -8,9 +8,9 @@
 }
 
 .AlumniHead {
-    font-size: 2.5vw;
     color: var(--blue);
     font-weight: 500;
+    font-size: 32px;
 }
 
 .alumnidata {
@@ -54,7 +54,7 @@
 }
 
 .morebtn {
-    font-size: 1.2vw;
+    font-size: 20px;
     background-color: var(--blue);
     color: white;
     border: 0;
@@ -66,4 +66,10 @@
 
 .morebtn:hover {
     background-color: #202060;
+}
+
+@media only screen and (max-width: 800px) {
+    .AlumniHead {
+        font-size: 24px;
+    }
 }

@@ -35,7 +35,7 @@
 /* website/domain name */
 .DomainName {
     margin: 0;
-    font-size: 2vw;
+    font-size: 2opx;
     color: var(--blue);
     font-family: 'Playfair Display', serif;
     cursor: pointer;
@@ -47,10 +47,10 @@
 }
 
 .links {
-    font-size: 1.4vw;
+    font-size: 20px;
     color: var(--blue);
     cursor: pointer;
-    margin: 1.8vw;
+    margin: 16px;
     text-decoration: none;
 }
 
@@ -93,9 +93,9 @@
 
 /* login button */
 .button {
-    font-size: 1.4vw;
-    width: 6vw;
-    height: 3vw;
+    font-size: 18px;
+    width: 72px;
+    height: 40px;
     background-color: var(--blue);
     color: white;
     border: 0;
@@ -137,4 +137,50 @@ a:active {
     display: block;
     color: #ff0000;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar-mobile {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 16px;
+    }
+
+    .NavRight-mobile, .NavRight-Left-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .DomainName {
+        font-size: 20px;
+    }
+
+    .NavLeft-mobile {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .NavRight, .NavLeft, .NavContainer {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar__hamburger {
+        color: var(--blue);
+        display: flex;
+        flex-direction: column;
+    }
 }
