@@ -1,7 +1,6 @@
 .clg-container {
     width: 100vw;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 24px;
 }
@@ -16,6 +15,7 @@
 
 .clg-content {
     width: 60%;
+    margin-right: 3vw;
 }
 
 .clg-content h1{
