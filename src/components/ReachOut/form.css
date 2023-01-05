@@ -4,7 +4,7 @@
 }
 
 h1 {
-    text-align: left;
+    text-align: center;
     font-size: 24px;
     color: var(--blue);
     font-weight: 500;
@@ -12,10 +12,11 @@ h1 {
 
 h3 {
     font-weight: 400;
-    text-align: left;
+    text-align: center;
     font-size: 20px;
     color: #5D5D5D;
-    margin: 1vw 0;
+    margin-top: 4px;
+    margin-bottom: 8px;
 }
 
 .form {
