@@ -1,0 +1,15 @@
+.achievers-container {
+    width: 100vw;
+}
+
+.achievers-container h1 {
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.achievers-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
