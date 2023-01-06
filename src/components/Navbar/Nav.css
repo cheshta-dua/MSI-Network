@@ -182,7 +182,8 @@ a:active {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: #c9c9c9;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         top: 9vw;
         left: -10vw;
         z-index: 2;

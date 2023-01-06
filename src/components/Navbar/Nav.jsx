@@ -126,8 +126,8 @@ const Nav = ({ dataChangefunc = "" }) => {
                             Alumni
                         </a> */}
                         <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
-                        <div className="links" onClick={about}>About Us</div>
                         <a href="#InstaPosts" className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
+                        <div className="links" onClick={about}>About Us</div>
                         <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                     </div>
                 }
@@ -183,6 +183,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                                     Alumni
                                 </a> */}
                                 <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
+                                <a href="#InstaPosts" className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
                                 <div className="links" onClick={about}>About Us</div>
                                 <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                             </div>
