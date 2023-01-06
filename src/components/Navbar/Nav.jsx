@@ -127,6 +127,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                         </a> */}
                         <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
                         <div className="links" onClick={about}>About Us</div>
+                        <a href="#InstaPosts"  className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
                         <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                     </div>
                 }
