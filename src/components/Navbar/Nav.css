@@ -3,6 +3,9 @@
 * {
     font-family: 'Roboto', sans-serif;
     /* background-color: #FCFCFC; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
@@ -82,7 +85,8 @@
 }
 
 .search-icon {
-    right: 490px;
+    padding-right: 20vw;
+    padding-left:0.5vw ;
 }
 
 .clear {
@@ -177,16 +181,34 @@ a:active {
     .navbar__menu {
         display: flex;
         flex-direction: column;
+        position: absolute;
+        background-color: #c9c9c9;
+        top: 9vw;
+        left: -10vw;
+        z-index: 2;
+        /* margin-right:10vw ; */
     }
 
     .navbar__hamburger {
         color: var(--blue);
         display: flex;
         flex-direction: column;
+        
     }
 
     .NavRight-Left-mobile{
         display: flex;
         flex-direction: column;
+    }
+    .sidePanel{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    /* logout btn */
+    .logoutbtn{
+        width: 20vw;
+        left:-10vw;
     }
 }

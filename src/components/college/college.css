@@ -1,5 +1,5 @@
 .clg-container {
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     padding: 24px;
@@ -40,7 +40,7 @@
     }
 
     .clg-img-container{
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: center;
     }

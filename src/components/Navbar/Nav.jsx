@@ -127,7 +127,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                         </a> */}
                         <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
                         <div className="links" onClick={about}>About Us</div>
-                        <a href="#InstaPosts"  className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
+                        <a href="#InstaPosts" className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
                         <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                     </div>
                 }
@@ -188,15 +188,22 @@ const Nav = ({ dataChangefunc = "" }) => {
                             </div>
                         }
 
-                        <div className="links loginbtn">
-                            <button className="button" onClick={login} hidden={vis}>
-                                Login
-                            </button>
-                            <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
-                            <div className="logoutbtn" onClick={() => logoutHandle()} style={{ visibility: vis ? "visible" : "hidden" }}>
-                                Log Out
-                            </div>
+
+                    </div>
+                </div>
+                <div className="links loginbtn">
+                    <button className="button" onClick={login} hidden={vis}>
+                        Login
+                    </button>
+                    <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
+                    <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
+                        <div onClick={() => logoutHandle()}  >
+                            Log Out
                         </div>
+                        <div className=" profle" >
+                            Profile
+                        </div>
+
                     </div>
                 </div>
             </div>
