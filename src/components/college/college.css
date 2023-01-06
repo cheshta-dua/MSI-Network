@@ -20,13 +20,14 @@
 
 .clg-content h1{
     text-align: left;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .clg-content p{
     font-size: 18px;
-    line-height: 28px;
+    line-height: 36px;
     padding-top: 8px;
+    color:rgb(62, 62, 62)
 }
 
 @media only screen and (max-width: 810px){
