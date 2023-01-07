@@ -86,7 +86,7 @@
 
 .search-icon {
     padding-right: 20vw;
-    padding-left:0.5vw ;
+    padding-left: 0.5vw;
 }
 
 .clear {
@@ -132,7 +132,8 @@ a:active {
     position: absolute;
     display: none;
     font-size: 16px;
-    width: 5vw;
+    width: 8vw;
+    right: 0;
     /* height: 2vw; */
     padding: 8px;
 
@@ -140,8 +141,18 @@ a:active {
 
 .loginbtn:hover .logoutbtn {
     display: block;
-    color: #ff0000;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+}
+
+.LogoutBtn {
+    color: #ff0000;
+    padding: 8px 0;
+}
+
+.profile {
+    color: var(--blue);
+    padding: 8px 0;
 }
 
 .navbar-mobile {
@@ -194,22 +205,23 @@ a:active {
         color: var(--blue);
         display: flex;
         flex-direction: column;
-        
+
     }
 
-    .NavRight-Left-mobile{
+    .NavRight-Left-mobile {
         display: flex;
         flex-direction: column;
     }
-    .sidePanel{
+
+    .sidePanel {
         display: flex;
         align-items: center;
         position: relative;
     }
 
     /* logout btn */
-    .logoutbtn{
+    .logoutbtn {
         width: 20vw;
-        left:-10vw;
+        left: -10vw;
     }
 }

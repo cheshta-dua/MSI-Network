@@ -141,13 +141,12 @@ const Nav = ({ dataChangefunc = "" }) => {
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
 
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div onClick={() => logoutHandle()}  >
+                        <div className="profile" >
+                            My Profile
+                        </div>
+                        <div className="LogoutBtn" onClick={() => logoutHandle()}  >
                             Log Out
                         </div>
-                        <div className=" profle" >
-                            Profile
-                        </div>
-
                     </div>
 
                 </div>
@@ -202,11 +201,11 @@ const Nav = ({ dataChangefunc = "" }) => {
                     </button>
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div onClick={() => logoutHandle()}  >
-                            Log Out
-                        </div>
-                        <div className=" profle" >
+                    <div className="profile" >
                             Profile
+                        </div>
+                        <div className="LogoutBtn" onClick={() => logoutHandle()}  >
+                            Log Out
                         </div>
 
                     </div>
