@@ -4,15 +4,56 @@ import "./index.css";
 const AddProfile = () => {
     const navigate = useNavigate();
     const [selectedFile, setSelectedFile] = useState(null);
-    const [course, setCourse] = useState("BCA");
-    const [batch, setBatch] = useState("2017-2020");
-    const [company, setCompany] = useState("");
+    const [User,setUser]=useState({
+        "UserName":"",
+        "Email": "",
+        "CurrentCompany":"",
+        "CurrentPosition":"",
+        "PastCompany":"",
+        "Education":"",
+        "Batch":"2017-2020",
+        "Course":"BCA",
+        "Description":"",
+        "LinkedinUrl":""
+    });
+    
+    
     var userData = localStorage.getItem('User') || "[]";
     const user = JSON.parse(userData);
-    const NextbtnHandle = () => {
+    
+    // post api
+    const apiToCall = "http://localhost:5000/user/register";
+    const ProfileApiHanlde= async (e) => {
+        e.preventDefault();
+        const data = {
+            
+            ...User,
+            "UserName":user.name,
+            "Email": user.email,
+        };
+        
+        const resp = await fetch(`${apiToCall}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        const res = await resp.json();
+        console.log(res);
+        // if (res.message === 'User does not exist') {
+        //     navigate('/complete-your-profile');
+        // }
+        // else {
+        //     navigate('/Landing-page');
+        // }
+    }
+
+    const NextbtnHandle = (e) => {
+        e.preventDefault();
         // navigate to other page when these fields are not empty
-        if (course !== "" && batch !== "" && company !== "") {
-            navigate('/Landing-page');
+        if (User.Course !== "" && User.Batch !== "" && User.CurrentCompany !== "") {
+            ProfileApiHanlde(e);
         }
         else {
             alert("Please write a headline, it will help your peers know you better.");
@@ -20,7 +61,7 @@ const AddProfile = () => {
         }
 
     }
-    console.log("select", typeof company);
+    
     return (
         <div className="addP-container">
             <div>
@@ -37,7 +78,7 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                                <select value={course} onChange={(e) => setCourse(e.target.value)} placeholder="BCA" required>
+                                <select value={User.Course} onChange={(e) => setUser({...User,Course:e.target.value})} placeholder="BCA" required>
                                     <option selected>BCA</option>
                                     <option>BBA</option>
                                 </select>
@@ -50,7 +91,7 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                                <select value={batch} onChange={(e) => setBatch(e.target.value)} placeholder="2016-2019" required>
+                                <select value={User.Batch} onChange={(e) =>setUser({...User,Batch:e.target.value})} placeholder="2016-2019" required>
                                     <option selected>2018-2021</option>
                                     <option >2017-2020</option>
                                     <option>2016-2019</option>
@@ -65,17 +106,17 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                                <input type="text" placeholder="what are you currently doing?" required value={company} onChange={(e) => setCompany(e.target.value)} />
+                                <input type="text" placeholder="what are you currently doing?" required value={User.CurrentCompany} onChange={(e) => setUser({...User,CurrentCompany:e.target.value})} />
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <label>
-                                    Current Company:
+                                    Designation:
                                 </label>
                             </td>
                             <td>
-                                <input type="text" placeholder="where are you currently working?" />
+                                <input type="text" placeholder="where are you currently working?" value={User.CurrentPosition} onChange={(e) => setUser({...User,CurrentPosition:e.target.value})}/>
                             </td>
                         </tr>
                         <tr>
@@ -85,7 +126,17 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                            <input type="text" placeholder="where did you work in past?" />
+                            <input type="text" placeholder="where did you work in past?" value={User.PastCompany} onChange={(e) => setUser({...User,PastCompany:e.target.value})}/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    Past Education/schooling:
+                                </label>
+                            </td>
+                            <td>
+                            <input type="text" placeholder="where did you work in past?" value={User.Education} onChange={(e) =>setUser({...User,Education:e.target.value})}/>
                             </td>
                         </tr>
                         <tr>
@@ -95,12 +146,22 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                            <input type="url" placeholder="it will help other's contact you easily" />
+                            <input type="url" placeholder="it will help other's contact you easily" value={User.LinkedinUrl} onChange={(e) => setUser({...User,LinkedinUrl:e.target.value})}/>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button type="submit" onClick={NextbtnHandle}>Save</button>
+                                <label>
+                                    Description:
+                                </label>
+                            </td>
+                            <td>
+                            <input type="url" placeholder="it will help other's to know you" value={User.Description} onChange={(e) => setUser({...User,Description:e.target.value})}/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" onClick={(e)=>NextbtnHandle(e)}>Save</button>
                             </td>
                         </tr>
                     </table>

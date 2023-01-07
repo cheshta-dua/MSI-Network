@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
 import { alumniData } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
@@ -96,7 +96,7 @@ const Nav = ({ dataChangefunc = "" }) => {
         setSearchValue("");
     }
 
-    return <>
+    return (<>
 
         <div className="NavContainer">
             <div className="NavLeft">
@@ -114,7 +114,6 @@ const Nav = ({ dataChangefunc = "" }) => {
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
-                        <div className="links" onClick={() => navigate('/college')}>College</div>
 
                         <div className="search-box">
                             <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
@@ -123,9 +122,10 @@ const Nav = ({ dataChangefunc = "" }) => {
                         </div>
                     </div>
                     : <div className="NavRight-Left">
-                        <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
+                        {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
                             Alumni
-                        </a>
+                        </a> */}
+                        <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
                         <div className="links" onClick={about}>About Us</div>
                         <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
                     </div>
@@ -146,7 +146,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                         </div>
 
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -167,39 +167,48 @@ const Nav = ({ dataChangefunc = "" }) => {
                 <div className="navbar__menu" style={{ display: menuOpen ? 'block' : 'none' }}>
                     <div className="NavRight-mobile">
                         {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
-                            ? <div className="NavRight-Left">
+                            ? <div className="NavRight-Left-mobile">
                                 <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                                 <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
+
                                 <div className="links" onClick={() => navigate('/college')}>College</div>
                                 <div className="search-box">
+
+                                    {/* <div className="links" >College</div> */}
+                                    {/* <div className="search-box">
+
                                     <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
                                     <i class="search-icon"><SearchIcon /></i>
                                     <i class="clear" onClick={() => { ClearFilter() }}>Clear</i>
+                                </div> */}
                                 </div>
-                            </div>
-                            : <div className="NavRight-Left-mobile">
-                                <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
+                                </div>
+                                : <div className="NavRight-Left-mobile">
+                                    {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
                                     Alumni
-                                </a>
-                                <div className="links" onClick={about}>About Us</div>
-                                <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
-                            </div>
+                                </a> */}
+                                    <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
+                                    <div className="links" onClick={about}>About Us</div>
+                                    <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
+                                </div>
+                                
                         }
 
-                        <div className="links loginbtn">
-                            <button className="button" onClick={login} hidden={vis}>
-                                Login
-                            </button>
-                            <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
-                            <div className="logoutbtn" onClick={() => logoutHandle()} style={{ visibility: vis ? "visible" : "hidden" }}>
-                                Log Out
+                                <div className="links loginbtn">
+                                    <button className="button" onClick={login} hidden={vis}>
+                                        Login
+                                    </button>
+                                    <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
+                                    <div className="logoutbtn" onClick={() => logoutHandle()} style={{ visibility: vis ? "visible" : "hidden" }}>
+                                        Log Out
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
-        </div>
-    </>
+            </div>
+        </>)
 }
 
-export default Nav;
+        export default Nav;
