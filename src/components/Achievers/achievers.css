@@ -1,15 +1,52 @@
-.achievers-container {
-    width: 100vw;
-}
-
-.achievers-container h1 {
-    text-align: center;
-    margin-top: 1vw;
-}
-
-.achievers-card {
+.achievers-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.achievers-container h1{
+    margin-bottom: 16px;
+}
+
+.A-CardContainer{
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievers-card{
+    width:60%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+}
+
+.achievers-card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.A-userDetail{
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+}
+
+.A-userImg{
+    width: 20%;
+}
+
+.Name{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.Ach{
+    color:#5d5d5d;
+    margin-bottom: 8px;
+}
+
+.Desc{
+    margin-bottom: 8px;
+    color: #3e3e3e;
 }

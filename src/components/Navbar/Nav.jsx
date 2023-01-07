@@ -110,12 +110,13 @@ const Nav = ({ dataChangefunc = "" }) => {
 
             <div className="NavRight">
 
-                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support"
+                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
+                        <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                         <div className="links" onClick={() => navigate('/support')}>Support MSI</div>
-
+                        
                         <div className="search-box">
                             <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
                             <i class="search-icon"><SearchIcon /></i>

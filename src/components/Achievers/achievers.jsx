@@ -1,12 +1,12 @@
-import A_Card from "../Card/A_Card";
-import { achieversData } from "../../Resorce/achieversData";
+import A_Card from "../Achievers/Achiever_Card";
+import { AchieverData } from "../../Resorce/AchieverData";
 import "./Achievers.css";
-const achievers=()=>{
+const Achievers=()=>{
     return(
         <div className="achievers-container">
             <h1>Alumni Achievers</h1>
             <div className="achievers-card">
-            {achieversData.map((e)=>{
+            {AchieverData.map((e)=>{
                 return(
                     <A_Card 
                     key={e.id}
@@ -19,4 +19,4 @@ const achievers=()=>{
     )
 }
 
-export default achievers;
+export default Achievers;
