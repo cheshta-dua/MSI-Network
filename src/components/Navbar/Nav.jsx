@@ -116,7 +116,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                         <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                         <div className="links" onClick={() => navigate('/support')}>Support MSI</div>
-                        
+
                         <div className="search-box">
                             <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
                             <i class="search-icon"><SearchIcon /></i>
@@ -169,10 +169,12 @@ const Nav = ({ dataChangefunc = "" }) => {
                 </div>
                 <div className="navbar__menu" style={{ display: menuOpen ? 'block' : 'none' }}>
                     <div className="NavRight-mobile">
-                        {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
+                        {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers"
                             ? <div className="NavRight-Left-mobile">
                                 <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
+                                <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
                                 <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
+                                <div className="links" onClick={() => navigate('/support')}>Support MSI</div>
                                 {/* <div className="links" >College</div> */}
                                 {/* <div className="search-box">
                                     <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
