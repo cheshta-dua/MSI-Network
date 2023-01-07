@@ -1,0 +1,63 @@
+.SocCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    margin: 16px;
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.SocCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.SocLogo {
+    width: 40%;
+}
+
+.SocLogo img {
+    width: 100%;
+}
+
+.react-multiple-carousel__arrow {
+    background-color: var(--blue) !important;
+    color: var(--blue);
+    width: auto;
+}
+
+.h2-soc {
+    font-size: 20px;
+    margin: 16px;
+    margin-bottom: 0px;
+}
+
+.h2-soc2 {
+    color: #5d5d5d;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 9vw;
+}
+
+.SocDesc {
+    font-size: 18px;
+    color: #5d5d5d;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+    .h2-soc {
+        font-size: 16px;
+    }
+
+    .h2-soc2 {
+        font-size: 12px;
+    }
+}

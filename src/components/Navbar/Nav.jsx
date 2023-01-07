@@ -110,10 +110,11 @@ const Nav = ({ dataChangefunc = "" }) => {
 
             <div className="NavRight">
 
-                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers"
+                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
+                        <div className="links" onClick={() => navigate('/Societies')}>Updates</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                         <div className="links" onClick={() => navigate('/support')}>Support MSI</div>
 
@@ -168,10 +169,11 @@ const Nav = ({ dataChangefunc = "" }) => {
                 </div>
                 <div className="navbar__menu" style={{ display: menuOpen ? 'block' : 'none' }}>
                     <div className="NavRight-mobile">
-                        {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers"
+                        {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
                             ? <div className="NavRight-Left-mobile">
                                 <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                                 <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
+                                <div className="links" onClick={() => navigate('/Societies')}>Updates</div>
                                 <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                                 <div className="links" onClick={() => navigate('/support')}>Support MSI</div>
                                 {/* <div className="links" >College</div> */}
