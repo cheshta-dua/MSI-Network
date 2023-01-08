@@ -9,13 +9,14 @@ import FacultyPage from "./pages/FacultyPage/FacultyPage";
 import SupportPage from "./pages/SupportPage/SupportPage";
 import AchieversPage from "./pages/AchieversPage/AchieversPage";
 import SocietiesPage from "./pages/SocietiesPage/SocietiesPage";
-
+// import Chat from "./components/ChatComponent/Chat"
+import ChatPage from "./pages/ChatPage/ChatPage";
 // import CollegePage from "./pages/abtCollege/College";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<ChatPage/>} />
       <Route path="/about-us" element={<About />} />
       <Route path="/login" element={<Login />} />
       <Route path="/complete-your-profile" element={<CompProfile/>}/>

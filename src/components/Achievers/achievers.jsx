@@ -1,6 +1,6 @@
 import A_Card from "./Achiever_Card";
 import { AchieverData } from "../../Resorce/AchieverData";
-import "./Achievers.css";
+import "./achievers.css";
 const Achievers=()=>{
     return(
         <div className="achievers-container">
