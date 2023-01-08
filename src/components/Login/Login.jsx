@@ -10,9 +10,9 @@ const Login = () => {
         const u = JSON.parse(a);
         const data = {
             "email": u.email,
-            "password":"234e"
+            
         };
-        console.log(data);
+        console.log("login ",data);
         const resp = await fetch(`${apiToCall}`, {
             method: "POST",
             headers: {

@@ -40,7 +40,7 @@ const AddProfile = () => {
             body: JSON.stringify(data)
         })
         const res = await resp.json();
-        console.log(typeof res);
+        console.log("profile", res);
         if(res.user){
             navigate('/Landing-page');
         }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
+import { facultyData } from "../../Resorce/FacultyData";
 import { alumniData } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -16,7 +17,7 @@ const Nav = ({ dataChangefunc = "" }) => {
     const [user, setUser] = useState({});
     const [vis, setVis] = useState(false);
     const [searchValue, setSearchValue] = useState("");
-
+    const [serachVis, setSearchVis] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const about = (e) => {
@@ -80,10 +81,10 @@ const Nav = ({ dataChangefunc = "" }) => {
         if (FilterData.length != 0) {
             console.log(typeof FilterData);
             dataChangefunc(FilterData);
-
         }
         else {
-            console.log("not found");
+            // console.log("not found");
+
 
         }
 
@@ -91,7 +92,7 @@ const Nav = ({ dataChangefunc = "" }) => {
     //clear Filter btn
     const ClearFilter = () => {
         //changing to its normal value
-        console.log(typeof alumniData);
+
         dataChangefunc(alumniData);
         setSearchValue("");
     }
@@ -117,17 +118,17 @@ const Nav = ({ dataChangefunc = "" }) => {
                         <div className="links" onClick={() => navigate('/Societies')}>Updates</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                         <div className="links" onClick={() => navigate('/support')}>Support MSI</div>
+                        {window.location.pathname == "/Landing-page"
+                            ? <div className="search-box">
+                                <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
+                                <i class="search-icon"><SearchIcon /></i>
+                                <i class="clear" onClick={() => { ClearFilter() }}>Clear</i>
+                            </div> : null
+                        }
 
-                        <div className="search-box">
-                            <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
-                            <i class="search-icon"><SearchIcon /></i>
-                            <i class="clear" onClick={() => { ClearFilter() }}>Clear</i>
-                        </div>
                     </div>
                     : <div className="NavRight-Left">
-                        {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
-                            Alumni
-                        </a> */}
+
                         <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
                         <a href="#InstaPosts" className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
                         <div className="links" onClick={about}>About Us</div>
@@ -189,9 +190,9 @@ const Nav = ({ dataChangefunc = "" }) => {
                                     <i class="clear" onClick={() => { ClearFilter() }}>Clear</i>
                                 </div> */}
                                 </div>
-                                </div>
-                                : <div className="NavRight-Left-mobile">
-                                    {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
+                            </div>
+                            : <div className="NavRight-Left-mobile">
+                                {/* <a href="#Alumni" onClick={() => { logoClickHandle() }} className="links">
                                     Alumni
                                 </a> */}
 
@@ -211,7 +212,7 @@ const Nav = ({ dataChangefunc = "" }) => {
                     </button>
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                    <div className="profile" >
+                        <div className="profile" >
                             Profile
                         </div>
                         <div className="LogoutBtn" onClick={() => logoutHandle()}  >
@@ -222,8 +223,8 @@ const Nav = ({ dataChangefunc = "" }) => {
 
                 </div>
             </div>
-            </div>
-        </>)
+        </div>
+    </>)
 }
 
-        export default Nav;
+export default Nav;

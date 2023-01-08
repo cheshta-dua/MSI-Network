@@ -9,7 +9,7 @@ const LandingPage=()=>{
         setData(alumniData);
     },[]);
     
-    console.log("data a", data);
+    // console.log("data a", data);
 
     return(
         <>
