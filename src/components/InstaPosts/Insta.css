@@ -1,0 +1,11 @@
+.posts{
+    display: flex;
+    justify-content: space-around;
+    padding: 24px;
+    flex-wrap: wrap;
+}
+
+.instaContainer h1{
+    font-size: 28px;
+    margin-top: 1vw;
+}

@@ -40,7 +40,10 @@ const AddProfile = () => {
             body: JSON.stringify(data)
         })
         const res = await resp.json();
-        console.log(res);
+        console.log(typeof res);
+        if(res.user){
+            navigate('/Landing-page');
+        }
         // if (res.message === 'User does not exist') {
         //     navigate('/complete-your-profile');
         // }

@@ -9,7 +9,8 @@ const Login = () => {
         var a = localStorage.getItem('User') || "[]";
         const u = JSON.parse(a);
         const data = {
-            "Email": u.email
+            "email": u.email,
+            "password":"234e"
         };
         console.log(data);
         const resp = await fetch(`${apiToCall}`, {

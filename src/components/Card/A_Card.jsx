@@ -15,7 +15,7 @@ const A_Card = (props) => {
             setShow(true);
         }
     })
-    console.log("name: ", name, props);
+    // console.log("name: ", name, props);
     return <>
         <div className="cardContainer" key={key}>
             <div className="userImg">
