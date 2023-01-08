@@ -110,13 +110,14 @@ const Nav = ({ dataChangefunc = "" }) => {
 
             <div className="NavRight">
 
-                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers"
+                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
+                        <div className="links" onClick={() => navigate('/Societies')}>Updates</div>
                         <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
                         <div className="links" onClick={() => navigate('/support')}>Support MSI</div>
-                        
+
                         <div className="search-box">
                             <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
                             <i class="search-icon"><SearchIcon /></i>
@@ -141,13 +142,12 @@ const Nav = ({ dataChangefunc = "" }) => {
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
 
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div onClick={() => logoutHandle()}  >
+                        <div className="profile" >
+                            My Profile
+                        </div>
+                        <div className="LogoutBtn" onClick={() => logoutHandle()}  >
                             Log Out
                         </div>
-                        <div className=" profle" >
-                            Profile
-                        </div>
-
                     </div>
 
                 </div>
@@ -169,16 +169,20 @@ const Nav = ({ dataChangefunc = "" }) => {
                 </div>
                 <div className="navbar__menu" style={{ display: menuOpen ? 'block' : 'none' }}>
                     <div className="NavRight-mobile">
-                        {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty"
+                        {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
                             ? <div className="NavRight-Left-mobile">
                                 <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
+                                <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
+                                <div className="links" onClick={() => navigate('/Societies')}>Updates</div>
                                 <div className="links facu" onClick={() => navigate('/faculty')}>Faculty</div>
+
 
                                 <div className="links" onClick={() => navigate('/college')}>College</div>
                                 <div className="search-box">
 
                                     {/* <div className="links" >College</div> */}
                                     {/* <div className="search-box">
+
 
                                     <input type="text" placeholder="search for people or companies" value={searchValue} onChange={(e) => { inputChange(e) }} />
                                     <i class="search-icon"><SearchIcon /></i>
@@ -207,11 +211,11 @@ const Nav = ({ dataChangefunc = "" }) => {
                     </button>
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div onClick={() => logoutHandle()}  >
-                            Log Out
-                        </div>
-                        <div className=" profle" >
+                    <div className="profile" >
                             Profile
+                        </div>
+                        <div className="LogoutBtn" onClick={() => logoutHandle()}  >
+                            Log Out
                         </div>
 
                     </div>

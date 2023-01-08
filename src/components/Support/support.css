@@ -2,7 +2,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 70%;
-    height: 30vw;
+    height: fit-content;
     border-radius: 4px;
     margin: auto;
     margin-top: 3%;
@@ -10,13 +10,38 @@
     align-items: center;
     justify-content: center;
     padding: 2%;
+    margin-bottom: 3vw;
 }
 
 .supportCard:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.content h3{
+.content h3 {
     text-align: left;
     margin-bottom: 24px;
+}
+
+.content h1 {
+    text-align: left;
+}
+
+.alumniForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .supportCard {
+        width: 90%;
+    }
+
+    .img {
+        width: 40%;
+    }
+
+    .supportCard img {
+        width: 100%;
+    }
 }

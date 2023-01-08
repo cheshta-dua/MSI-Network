@@ -8,6 +8,8 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import FacultyPage from "./pages/FacultyPage/FacultyPage";
 import SupportPage from "./pages/SupportPage/SupportPage";
 import AchieversPage from "./pages/AchieversPage/AchieversPage";
+import SocietiesPage from "./pages/SocietiesPage/SocietiesPage";
+
 // import CollegePage from "./pages/abtCollege/College";
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
       <Route path="/faculty" element={< FacultyPage />}/>
       <Route path="/support" element={< SupportPage />}/>
       <Route path="/Achievers" element={< AchieversPage />}/>
+      <Route path="/Societies" element={< SocietiesPage />}/>
       {/* <Route path="/college" element={<CollegePage />}/> */}
       </Routes>
     </BrowserRouter>
