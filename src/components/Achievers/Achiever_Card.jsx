@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./achievers.css";
+import "./Achievers.css";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const A_Card = (props) => {

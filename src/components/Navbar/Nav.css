@@ -149,8 +149,7 @@ a:active {
     color: #ff0000;
     padding: 8px 0;
 }
-
-.profile {
+.navpbtn {
     color: var(--blue);
     padding: 8px 0;
 }

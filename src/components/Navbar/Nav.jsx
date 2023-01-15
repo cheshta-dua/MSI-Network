@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
-import { facultyData } from "../../Resorce/FacultyData";
 import { alumniData } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,7 +16,6 @@ const Nav = ({ dataChangefunc = "" }) => {
     const [user, setUser] = useState({});
     const [vis, setVis] = useState(false);
     const [searchValue, setSearchValue] = useState("");
-    const [serachVis, setSearchVis] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const about = (e) => {
@@ -37,8 +35,9 @@ const Nav = ({ dataChangefunc = "" }) => {
     }
     //login button visibility
     var u;
+    var a = localStorage.getItem('User') || "[]";
     useEffect(() => {
-        var a = localStorage.getItem('User') || "[]";
+        
         // console.log("a ",a);
         u = JSON.parse(a);
         setUser(u);
@@ -50,7 +49,7 @@ const Nav = ({ dataChangefunc = "" }) => {
             setVis(true);
         }
 
-    }, []);
+    }, [a]);
 
     //from logo to home page navigate
     const logoClickHandle = () => {
@@ -143,8 +142,8 @@ const Nav = ({ dataChangefunc = "" }) => {
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
 
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div className="profile" >
-                            My Profile
+                        <div className="navpbtn" onClick={()=>navigate('/profile')}>
+                            Profile
                         </div>
                         <div className="LogoutBtn" onClick={() => logoutHandle()}  >
                             Log Out
@@ -212,8 +211,8 @@ const Nav = ({ dataChangefunc = "" }) => {
                     </button>
                     <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div className="profile" >
-                            Profile
+                        <div  onClick={()=>navigate('/profile')}>
+                           Profile
                         </div>
                         <div className="LogoutBtn" onClick={() => logoutHandle()}  >
                             Log Out
