@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {  toast } from 'react-toastify';
 import "./index.css";
 const AddProfile = () => {
     const navigate = useNavigate();
@@ -40,8 +41,18 @@ const AddProfile = () => {
             body: JSON.stringify(data)
         })
         const res = await resp.json();
-        console.log("profile", res);
+        // console.log("profile", res);
         if(res.user){
+            toast.success("Registered Successfully", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
             navigate('/Landing-page');
         }
         // if (res.message === 'User does not exist') {

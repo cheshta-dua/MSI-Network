@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import PropTypes from 'prop-types';
+import {  toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import { alumniData } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
@@ -30,8 +31,19 @@ const Nav = ({ dataChangefunc = "" }) => {
     //logout button handle
     const logoutHandle = () => {
         setUser({});
+        toast.success("Logged out Successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
         navigate('/');
         localStorage.removeItem('User');
+        localStorage.removeItem('auth');
     }
     //login button visibility
     var u;
@@ -91,7 +103,6 @@ const Nav = ({ dataChangefunc = "" }) => {
     //clear Filter btn
     const ClearFilter = () => {
         //changing to its normal value
-
         dataChangefunc(alumniData);
         setSearchValue("");
     }
