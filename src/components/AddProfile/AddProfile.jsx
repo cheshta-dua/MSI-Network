@@ -120,7 +120,7 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                                <input type="text" placeholder="what are you currently doing?" required value={User.CurrentCompany} onChange={(e) => setUser({...User,CurrentCompany:e.target.value})} />
+                                <input type="text" placeholder="where are you currently working?" required value={User.CurrentCompany} onChange={(e) => setUser({...User,CurrentCompany:e.target.value})} />
                             </td>
                         </tr>
                         <tr>
@@ -130,7 +130,7 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                                <input type="text" placeholder="where are you currently working?" value={User.CurrentPosition} onChange={(e) => setUser({...User,CurrentPosition:e.target.value})}/>
+                                <input type="text" placeholder="what are you currently doing?" value={User.CurrentPosition} onChange={(e) => setUser({...User,CurrentPosition:e.target.value})}/>
                             </td>
                         </tr>
                         <tr>

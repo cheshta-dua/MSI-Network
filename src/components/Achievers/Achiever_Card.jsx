@@ -7,7 +7,7 @@ const A_Card = (props) => {
     const { key, para } = props;
     const { name, achievement, LinkedinUrl = null, image = null, desc } = para;
 
-    console.log("name: ", name, props);
+    // console.log("name: ", name, props);
     return <>
         <div className="A-CardContainer" key={key}>
             <div className="A-userImg">

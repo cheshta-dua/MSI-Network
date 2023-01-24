@@ -6,7 +6,7 @@ const A_Card = (props) => {
     const [show, setShow] = useState(false);
 
     const { key, para } = props;
-    const { name, company, gitUrl = null, LinkedinUrl = null, email = null, image = null, Designation = null } = para;
+    const { UserName, CurrentCompany, gitUrl = null, LinkdinID = null, email = null, ImageLink = null, Designation = null } = para;
     useEffect(() => {
         if (email === null) {
             setShow(false);
@@ -15,25 +15,25 @@ const A_Card = (props) => {
             setShow(true);
         }
     })
-    // console.log("name: ", name, props);
+    console.log("name: ", UserName, LinkdinID);
     return <>
         <div className="cardContainer" key={key}>
             <div className="userImg">
-                <img src={image} alt="alumnus" style={{ width: "100%", height: "100%" }} />
+                <img src={typeof ImageLink==="undefined"?"images/MSI_logo.png":ImageLink} alt="alumnus" style={{ width: "100%", height: "100%" }} />
             </div>
             <div className="userDetail">
                 <div className="userDetailsText">
-                    <div className="userName">{name}</div>
+                    <div className="userName">{UserName}</div>
                     <div className="userCompany">
                         <div>
-                            {show ? Designation : company}
+                            {show ? Designation : CurrentCompany}
                         </div>
                     </div>
                 </div>
                 <div class="userDetailsIcons">
                     {show ? <a href={"mailto:" + email}> <EmailIcon /> </a> : null}
                     {!show ?
-                        <div>  <a href={"http://" + LinkedinUrl}> <LinkedInIcon /></a></div>
+                        <div>  <a href={"http://" + LinkdinID}> <LinkedInIcon /></a></div>
                         : null}
                 </div>
             </div>

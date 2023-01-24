@@ -34,7 +34,6 @@ const Login = () => {
             navigate('/complete-your-profile');
         }
         else {
-            
             toast.success("Login Successful", {
                 position: "top-right",
                 autoClose: 5000,

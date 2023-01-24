@@ -2,23 +2,27 @@ import React, { useEffect, useState } from "react";
 // import PropTypes from 'prop-types';
 import {  toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
-import { alumniData } from "../../Resorce/data";
+// import { data } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Nav.css";
 
 
-const Nav = ({ dataChangefunc = "" }) => {
+const Nav = ({ dataChangefunc = "",data="" }) => {
     const navigate = useNavigate();
 
     // console.log('current URL 👉️', window.location.href);
     // console.log('current Pathname 👉️', window.location.pathname);
-
+    const[originalData,setOriginalData]=useState();
     const [user, setUser] = useState({});
     const [vis, setVis] = useState(false);
     const [searchValue, setSearchValue] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
-
+    useEffect(()=>{
+        setOriginalData(data);
+        // console.log(data,"::",originalData);
+    },[]);
+    
     const about = (e) => {
 
         e.preventDefault();
@@ -49,8 +53,6 @@ const Nav = ({ dataChangefunc = "" }) => {
     var u;
     var a = localStorage.getItem('User') || "[]";
     useEffect(() => {
-        
-        // console.log("a ",a);
         u = JSON.parse(a);
         setUser(u);
 
@@ -77,10 +79,10 @@ const Nav = ({ dataChangefunc = "" }) => {
     useEffect(() => {
         var FilterData = [];
         if (searchValue.length != 0) {
-            FilterData = alumniData.filter((ele) => {
+            FilterData = data.filter((ele) => {
                 const searchTerm = searchValue.toLowerCase();
-                const fullName = ele.name.toLowerCase();
-                const company = ele.company.toLowerCase();
+                const fullName = ele.UserName.toLowerCase();
+                const company = ele.CurrentCompany.toLowerCase();
                 return (
                     searchTerm &&
                     fullName.startsWith(searchTerm) || company.startsWith(searchTerm) &&
@@ -103,7 +105,8 @@ const Nav = ({ dataChangefunc = "" }) => {
     //clear Filter btn
     const ClearFilter = () => {
         //changing to its normal value
-        dataChangefunc(alumniData);
+        dataChangefunc(originalData);
+        console.log("nav ",originalData,"=>",data);
         setSearchValue("");
     }
 

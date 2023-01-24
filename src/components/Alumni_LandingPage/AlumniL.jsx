@@ -6,6 +6,7 @@ const AlumniL =( {data})=>{
     <div className="AlumniL-container">
         {Array.isArray(data)?
         data.map((ele) => {
+            // console.log("ele",ele);
                     return (<A_Card
                         key={ele.id}
                         para={ele}

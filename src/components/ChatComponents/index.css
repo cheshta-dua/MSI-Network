@@ -1,0 +1,107 @@
+.contacts-container {
+    display: grid;
+    grid-template-rows: 10% 75% 15%;
+    overflow: hidden;
+    background-color: #080420;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.brand img {
+    height: 2rem;
+}
+
+.brand h3 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    gap: 0.8rem;
+    /* &::-webkit-scrollbar {
+      width: 0.2rem;
+      &-thumb {
+        background-color: #ffffff39;
+        width: 0.1rem;
+        border-radius: 1rem;
+      } */
+}
+
+.contacts::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.contacts::-webkit-scrollbar-thumb {
+    background-color: #ffffff39;
+    width: 0.1rem;
+    border-radius: 1rem;
+}
+
+.contact {
+    background-color: #ffffff34;
+    min-height: 5rem;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.avatar img {
+    height: 3rem;
+}
+
+.avatar .username h3 {
+    color: white;
+}
+
+.avatar .selected {
+    background-color: #dfdfdf;
+}
+.selected{
+    background-color: #dfdfdf;
+}
+.current-user {
+    background-color: #0d0d30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.current-user .avatar img{
+      height: 4rem;
+      max-inline-size: 100%;
+}
+.current-user .username h2{
+    color: white;
+}
+
+
+/* welcome css */
+
+.welcome-container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.welcome-container img{
+    height: 20rem;
+}
+.welcome-container span ,h1{
+    color: #9e9ea0;
+  }
+
