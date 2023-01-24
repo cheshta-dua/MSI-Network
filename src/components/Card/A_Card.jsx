@@ -19,7 +19,15 @@ const A_Card = (props) => {
     return <>
         <div className="cardContainer" key={key}>
             <div className="userImg">
-                <img src={typeof ImageLink==="undefined"?"images/MSI_logo.png":ImageLink} alt="alumnus" style={{ width: "100%", height: "100%" }} />
+                <img src={ImageLink|| "images/dummy_profile.webp"} alt="alumnus" 
+                    onError={(e) =>
+                        (e.target.onerror = null)(
+                          (e.target.src =
+                            "images/dummy_profile.webp")
+                        )
+                      }
+                    style={{ width: "100%", height: "100%" }} 
+                />
             </div>
             <div className="userDetail">
                 <div className="userDetailsText">
