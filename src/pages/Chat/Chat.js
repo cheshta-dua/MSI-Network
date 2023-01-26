@@ -4,6 +4,9 @@ import Contacts from "../../components/ChatComponents/Contacts";
 import { useNavigate } from "react-router-dom";
 import Welcome from "../../components/ChatComponents/Welcome";
 import ChatContainer from "../../components/ChatComponents/ChatContainer";
+
+import io from "socket.io-client";
+const socket = io("http://localhost:5001");
 const Chat = () => {
     const navigate = useNavigate();
     const [contacts, setContacts] = useState([]);
@@ -25,6 +28,36 @@ const Chat = () => {
     useEffect(() => {
         checkLogin();
     }, []);
+    useEffect(() => {
+        socket.on("receive_message", (data) => {
+            
+            console.log("data", data);
+            
+            // console.log("data", data);
+            // setMessages((oldMsg) => [...oldMsg, data]);
+        });
+        socket.on("connection", (data) => {
+            // we get socket id from here
+            console.log("data", data);
+            fetch(`http://localhost:5000/user/socket}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    socketId: data,
+                    id: currentUser[0].id,
+                }),
+            }).then((res) => res.json())
+            .then((data) => {
+                console.log("data", data);
+            }).catch((err) => {
+                console.log(err);
+            });
+            // console.log("data", data);
+            // setMessages((oldMsg) => [...oldMsg, data]);
+        });
+    }, [socket])
     // useEffect(() => {
     //     if (currentUser) {
     //       socket.current = io(host);
@@ -55,7 +88,7 @@ const Chat = () => {
                 {currentChat === undefined ? (
                     <Welcome />
                 ) : (
-                    <ChatContainer currentChat={currentChat} currentUser={currentUser}/>
+                    <ChatContainer currentChat={currentChat} currentUser={currentUser} socket = {socket}/>
                     // <div></div> socket={socket}
                 )}
             </div>
