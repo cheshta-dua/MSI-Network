@@ -5,12 +5,12 @@ const Myprofile = () => {
     const [user, setUser] = useState(undefined);
     var a = localStorage.getItem('User') || "[]";
     const u = JSON.parse(a);
-    console.log("storage", u);
+    
     const apicall = async () => {
         const apiToCall = `http://localhost:5000/user/user/${u[0].id}`;
         const resp = await fetch(`${apiToCall}`);
         const res = await resp.json();
-        console.log("profile=>", res);
+        
 
         setUser(res);
     }

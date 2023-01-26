@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router';
 
 export default function Secure({component, dat}) {
   const navigate = useNavigate();
+  const Component=component;
   const data = localStorage.getItem('User');
   useEffect(() => {
     if (!data) {
@@ -11,7 +12,7 @@ export default function Secure({component, dat}) {
   },[]);
 
   if(!dat)
-    return <component />;
+    return <Component />;
   else 
-    return <component data={dat} />;
+    return <Component data={dat} />;
 }

@@ -20,7 +20,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     useEffect(()=>{
         setOriginalData(data);
-        // console.log(data,"::",originalData);
+        
     },[]);
     
     const about = (e) => {
@@ -62,7 +62,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
         else {
             setVis(true);
         }
-        console.log("User",user);
+
 
     }, [a]);
 
@@ -93,7 +93,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
         }
 
         if (FilterData.length != 0) {
-            console.log(typeof FilterData);
+           
             dataChangefunc(FilterData);
         }
         else {
@@ -125,7 +125,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
 
             <div className="NavRight">
 
-                {window.location.pathname == "/Landing-page" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
+                {window.location.pathname == "/Landing-page" ||window.location.pathname == "/profile" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>

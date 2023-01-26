@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./achievers.css";
+import "./Achievers.css";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const A_Card = (props) => {
@@ -7,7 +7,7 @@ const A_Card = (props) => {
     const { key, para } = props;
     const { name, achievement, LinkedinUrl = null, image = null, desc } = para;
 
-    // console.log("name: ", name, props);
+    
     return <>
         <div className="A-CardContainer" key={key}>
             <div className="A-userImg">

@@ -39,7 +39,6 @@ const Chat = () => {
             setContacts(res);
         }
     }
-    console.log("dataContacts", contacts);
     useEffect(() => {
         contactset();
     }, [currentUser]);

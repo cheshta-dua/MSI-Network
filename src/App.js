@@ -25,7 +25,7 @@ function App() {
     const apiToCall = "http://localhost:5000/user/user";
     const resp = await fetch(`${apiToCall}`);
     const res = await resp.json();  
-    // console.log("app=>",res);
+    
     setLoading(false);
     setData(res);
   }
@@ -50,7 +50,7 @@ function App() {
         <Route path="/support" element={< Secure component = {SupportPage} />} />
         <Route path="/Achievers" element={< Secure component = {AchieversPage} />} />
         <Route path="/Societies" element={< Secure component = {SocietiesPage} />} />
-        <Route path="/profile" element={<Secure component = {Profile} />} />
+        <Route path="/profile" element={<Profile  />}/>
       </Routes>
       <ToastContainer />
     </BrowserRouter>

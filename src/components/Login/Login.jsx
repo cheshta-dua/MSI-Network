@@ -16,7 +16,7 @@ const Login = () => {
         const data = {
             "email": u.email,
         };
-        // console.log("login ", data, " ", u.email);
+        
         const resp = await fetch(`${apiToCall}`, {
             method: "POST",
             headers: {
@@ -27,8 +27,7 @@ const Login = () => {
 
         localStorage.setItem('auth', true);
         const res = await resp.json();
-        // console.log("res ",typeof res.user);
-        // console.log("User ",Object.assign(u, res.user));
+       
         if (res.message === 'User does not exist') {
             toast("Login Successful");
             navigate('/complete-your-profile');

@@ -42,7 +42,7 @@ const AddProfile = () => {
             body: JSON.stringify(data)
         })
         const res = await resp.json();
-        // console.log("profile", res);
+        
         if(res.user){
             toast.success("Registered Successfully", {
                 position: "top-right",
@@ -67,7 +67,7 @@ const AddProfile = () => {
         }
         else {
             alert("Please write a headline, it will help your peers know you better.");
-            console.log("not filled");
+            // console.log("not filled");
         }
 
     }

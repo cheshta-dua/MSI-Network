@@ -5,7 +5,7 @@ const Contacts=({contacts,changeChat})=>{
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
-  // console.log("contacts::",contacts);
+  
   useEffect( () => {
     const data =  JSON.parse(
       localStorage.getItem('User')
@@ -25,9 +25,7 @@ const Contacts=({contacts,changeChat})=>{
             <h3>MSI Network</h3>
           </div> */}
           <div className="contacts">
-            {/* {contacts.map((ele)=>{
-              console.log(ele);
-            })} */}
+            
             {contacts.map((contact, index) => {
               return (
                 <div
