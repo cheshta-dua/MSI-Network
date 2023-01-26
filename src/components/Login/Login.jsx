@@ -1,5 +1,5 @@
 import jwt_decode from "jwt-decode";
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleLogin } from '@react-oauth/google';
@@ -10,13 +10,13 @@ const Login = () => {
     const apiToCall = "http://localhost:5000/user/login";
     const loginHandle = async (userObject) => {
         localStorage.setItem('User', JSON.stringify(userObject));
-        var a = localStorage.getItem('User') || "[]";
-        const u = JSON.parse(a);
+        var user = localStorage.getItem('User') || "[]";
+        const u = JSON.parse(user);
+        //send data to backend
         const data = {
             "email": u.email,
-            
         };
-        console.log("login ",data," ",u.email);
+        // console.log("login ", data, " ", u.email);
         const resp = await fetch(`${apiToCall}`, {
             method: "POST",
             headers: {
@@ -24,16 +24,21 @@ const Login = () => {
             },
             body: JSON.stringify(data)
         })
-        
-        localStorage.setItem('auth',true);
+
+        localStorage.setItem('auth', true);
         const res = await resp.json();
-        console.log("res ",res);
-        
+        // console.log("res ",typeof res.user);
+        // console.log("User ",Object.assign(u, res.user));
         if (res.message === 'User does not exist') {
             toast("Login Successful");
             navigate('/complete-your-profile');
         }
         else {
+            //const items = JSON.parse(localStorage.getItem("myItems"));
+            // const newItems = JSON.stringify([...items,{name:"new item"}])
+            // localStorage.setItem("myItems",newItems);
+            const newuser=JSON.stringify([Object.assign(u, res.user)]);
+            localStorage.setItem('User',newuser);
             toast.success("Login Successful", {
                 position: "top-right",
                 autoClose: 5000,
@@ -43,7 +48,7 @@ const Login = () => {
                 draggable: true,
                 progress: undefined,
                 theme: "light",
-                });
+            });
             navigate('/Landing-page');
         }
     }
@@ -62,7 +67,7 @@ const Login = () => {
                             onSuccess={credentialResponse => {
                                 var userObject = jwt_decode(credentialResponse.credential);
                                 localStorage.removeItem('User');
-                                
+
                                 loginHandle(userObject);
                                 //navigate('/complete-your-profile');   //here we navigate to landing page if user name is found in db otherwise to complete-your-profile page
                             }}

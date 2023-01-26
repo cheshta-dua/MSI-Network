@@ -44,7 +44,7 @@ function App() {
     <BrowserRouter>
       {!loading? <Nav dataChangefunc={setData} data={data}/>:null}
       <Routes>
-        <Route path="/chat" element={<ChatPage data={data}/>} />
+        {!loading?<Route path="/chat" element={<ChatPage />} />:null} 
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/login" element={<Login />} />
