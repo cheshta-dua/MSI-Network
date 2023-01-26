@@ -41,6 +41,12 @@ const Contacts=({contacts,changeChat})=>{
                     <img
                       src={contact.ImageLink|| "images/dummy_profile.webp"}
                       alt=""
+                      onError={(e) =>
+                        (e.target.onerror = null)(
+                          (e.target.src =
+                            "images/dummy_profile.webp")
+                        )
+                      }
                     />
                   </div>
                   <div className="username">

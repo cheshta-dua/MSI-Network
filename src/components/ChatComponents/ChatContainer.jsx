@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 import ChatInput from "./ChatInput";
-const ChatContainer = ({ currentChat, currentUser, socket }) => {
+const ChatContainer = ({ currentChat, currentUser }) => {
     const [messages, setMessages] = useState([]);
     //getting previous messages of user from a person
     const getmssg=async()=>{
@@ -28,20 +28,21 @@ const ChatContainer = ({ currentChat, currentUser, socket }) => {
     const handleSendMsg = async (msg) => {
         //send mssgs to database
         // console.log("mssg ", currentUser[0], " to", currentChat);
-        // const apiToCall = "http://localhost:5001/";
+        const apiToCall = "http://localhost:5000/mssg/addmsg/";
         const data = {
             from: currentUser[0].id,
             to: currentChat._id,
             message: msg,
         };
         
-        // const resp = await fetch(`${apiToCall}`, {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: JSON.stringify(data)
-        // })
+        const resp = await fetch(`${apiToCall}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+
         const res = await resp.json();
         // alert(msg);
     }
