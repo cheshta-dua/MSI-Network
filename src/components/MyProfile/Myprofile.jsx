@@ -1,7 +1,22 @@
+import { useState, useEffect } from "react";
 import "./myprofile.css";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Myprofile = () => {
+    const [user, setUser] = useState(undefined);
     var a = localStorage.getItem('User') || "[]";
     const u = JSON.parse(a);
+    console.log("storage", u);
+    const apicall = async () => {
+        const apiToCall = `http://localhost:5000/user/user/${u[0].id}`;
+        const resp = await fetch(`${apiToCall}`);
+        const res = await resp.json();
+        console.log("profile=>", res);
+
+        setUser(res);
+    }
+    useEffect(() => {
+        apicall();
+    }, []);
     return (
         <div className="profile-maincontainer">
             <main class="profile">
@@ -9,43 +24,28 @@ const Myprofile = () => {
                 <section class="container">
                     <aside class="profile-image">
                         {/* <a class="camera" href="#"> */}
-                            <img src={u.picture} alt="user" />
-                        
+                        <img src={u[0].picture} alt="user" />
+
                     </aside>
                     <section class="profile-info">
-                        <h1 class="first-name">{u.given_name}</h1>
-                        <h1 class="second-name">{u.family_name}</h1>
-                        <h2>ABOUT</h2>
+                        <h1 class="first-name">{user ? user.UserName : u[0].given_name}</h1>
+
+                        {user?<h2>{user.CurrentPosition} @ {user.CurrentCompany}</h2>:<h2>ABOUT</h2>} 
                         <p>
-                            hello hello, I'm angela, artist and developer 🌼 student at stanford; intern at zynga 🌱 happy to be here! 🌿 let's code the best we can!
+                            {user ? user.Description : <div> hello, I'm angela, artist and developer 🌼 student at stanford; intern at zynga 🌱 happy to be here! 🌿 let's code the best we can!</div>}
                         </p>
 
-                        <aside class="social-media-icons">
-                            <a href="https://twitter.com/zephybite" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://codepen.io/zephyo" target="_blank">
-                                <i class="fab fa-codepen"></i>
-                            </a>
-                            <a href="https://github.com/zephyo" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        
-                        <a href="https://medium.com/@zephyo" target="_blank">
-                            <i class="fab fa-medium"></i>
-                        </a>
-                    </aside>
+
+
+                    </section>
                 </section>
-            </section>
-            <section class="statistics">
-                <button class="icon arrow left"></button>
-                <button class="icon arrow right"></button>
-                <p><strong>29</strong> Followers</p>
-                <p><strong>184</strong> Following</p>
-                <p><strong>6</strong> Likes</p>
-            </section>
-            <button class="icon close"></button>
-        </main>
+                <section class="statistics">
+
+                    <a href={user?"http://" + user.LinkdinID:null}><LinkedInIcon/></a>
+
+                </section>
+                <button class="icon close"></button>
+            </main>
         </div >
     )
 }

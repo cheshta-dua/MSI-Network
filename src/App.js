@@ -31,13 +31,6 @@ function App() {
   useEffect(() => {
     setLoading(true);
     apicall();
-    //18
-    // const apiToCall = "http://localhost:5000/user/user";
-    // const resp = await fetch(`${apiToCall}`);
-    // const res = await resp.json();  
-    // // console.log("app=>",res);
-    // setLoading(false);
-    // setData(res);
   }, []);
 
   return (

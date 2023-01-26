@@ -14,7 +14,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
     // console.log('current URL 👉️', window.location.href);
     // console.log('current Pathname 👉️', window.location.pathname);
     const[originalData,setOriginalData]=useState();
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState([]);
     const [vis, setVis] = useState(false);
     const [searchValue, setSearchValue] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
     }
     //logout button handle
     const logoutHandle = () => {
-        setUser({});
+        setUser([]);
         toast.success("Logged out Successfully", {
             position: "top-right",
             autoClose: 5000,
@@ -62,6 +62,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
         else {
             setVis(true);
         }
+        console.log("User",user);
 
     }, [a]);
 
@@ -106,7 +107,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
     const ClearFilter = () => {
         //changing to its normal value
         dataChangefunc(originalData);
-        console.log("nav ",originalData,"=>",data);
+        // console.log("nav ",originalData,"=>",data);
         setSearchValue("");
     }
 
@@ -153,7 +154,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                     <button className="button" onClick={login} hidden={vis}>
                         Login
                     </button>
-                    <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
+                    {user[0] &&<img src={user[0].picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}
 
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
                         <div className="navpbtn" onClick={()=>navigate('/profile')}>
@@ -223,8 +224,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                     <button className="button" onClick={login} hidden={vis}>
                         Login
                     </button>
-                    <img src={user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />
-                    <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
+                    {user[0] &&<img src={user[0].picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}                    <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
                         <div  onClick={()=>navigate('/profile')}>
                            Profile
                         </div>
