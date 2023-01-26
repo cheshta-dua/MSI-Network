@@ -24,7 +24,7 @@ const ChatContainer = ({ currentChat, currentUser, socket }) => {
     }
     useEffect(()=>{
         getmssg();
-    },[currentChat]);
+    });
     const handleSendMsg = async (msg) => {
         //send mssgs to database
         // console.log("mssg ", currentUser[0], " to", currentChat);
@@ -42,10 +42,8 @@ const ChatContainer = ({ currentChat, currentUser, socket }) => {
         //     },
         //     body: JSON.stringify(data)
         // })
-
-        // const res = await resp.json();
+        const res = await resp.json();
         // alert(msg);
-        await socket.emit("send_message", data);
     }
     return <>
         <div className="ChatContainer">
