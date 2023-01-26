@@ -29,8 +29,9 @@ const AddProfile = () => {
         const data = {
             
             ...User,
-            "UserName":user.name,
-            "Email": user.email,
+            "UserName":user[0].name,
+            "Email": user[0].email,
+            "ImageLink":user[0].picture,
         };
         
         const resp = await fetch(`${apiToCall}`, {
@@ -55,12 +56,7 @@ const AddProfile = () => {
                 });
             navigate('/Landing-page');
         }
-        // if (res.message === 'User does not exist') {
-        //     navigate('/complete-your-profile');
-        // }
-        // else {
-        //     navigate('/Landing-page');
-        // }
+      
     }
 
     const NextbtnHandle = (e) => {
