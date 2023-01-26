@@ -12,7 +12,10 @@ const Welcome = () => {
     }, []);
     return (
         <div className="welcome-container">
-            <img alt="" />
+            <img src="images/hellogif.gif" />
+            
+            {/* <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_pejowq8e.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop controls autoplay></lottie-player> */}
             <h1>
                 Welcome, <span>{userName}!</span>
             </h1>

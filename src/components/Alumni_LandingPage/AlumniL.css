@@ -1,7 +1,30 @@
+:root {
+    --blue: #303090;
+}
 .AlumniL-container{
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+.ChatIcon{
+    cursor: pointer;
+    position:fixed;
+    bottom: 70px;
+    right: 80px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    color: white;
+}
+@media only screen and (max-width: 900){
+    .ChatIcon{
+        width: 20vw;
+        height: 10vw;
+    }
 }

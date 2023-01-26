@@ -15,13 +15,13 @@ const AddProfile = () => {
         "Batch":"2017-2020",
         "Course":"BCA",
         "Description":"",
-        "LinkedinUrl":""
+        "LinkedinID":""
     });
     
     
     var userData = localStorage.getItem('User') || "[]";
     const user = JSON.parse(userData);
-    
+    // console.log(user);
     // post api
     const apiToCall = "http://localhost:5000/user/register";
     const ProfileApiHanlde= async (e) => {
@@ -29,11 +29,11 @@ const AddProfile = () => {
         const data = {
             
             ...User,
-            "UserName":user[0].name,
-            "Email": user[0].email,
-            "ImageLink":user[0].picture,
+            "UserName":user.name,
+            "Email": user.email,
+            "ImageLink":user.picture,
         };
-        
+        console.log("register", data);
         const resp = await fetch(`${apiToCall}`, {
             method: "POST",
             headers: {
@@ -42,7 +42,7 @@ const AddProfile = () => {
             body: JSON.stringify(data)
         })
         const res = await resp.json();
-        
+        console.log(res);
         if(res.user){
             toast.success("Registered Successfully", {
                 position: "top-right",
@@ -54,6 +54,8 @@ const AddProfile = () => {
                 progress: undefined,
                 theme: "light",
                 });
+            const newuser=JSON.stringify([Object.assign(user, res.user)]);
+            localStorage.setItem('User',newuser);
             navigate('/Landing-page');
         }
       

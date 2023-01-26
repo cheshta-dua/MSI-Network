@@ -22,8 +22,74 @@
   height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 3vw;
 }
+.profile {
+  animation: loadProfile 0.6s ease-in-out;
+  animation-fill-mode: both;
+  font-size: 0.9rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* background-color: aliceblue; */
+  height: 60vh;
+  max-height: 950px;
+  max-width: 600px;
+  box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
+}
+.container {
+  animation: loadProfileImage 1s ease-in-out 0.5s;
+  animation-fill-mode: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  width: 100%;
+  height: 100%;
+} 
+.profile-info{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.profile-image{
+  margin: 30px 0 0 0;
+  animation: loadProfileImage 1s ease-in-out 1s;
+  animation-fill-mode: both;
+}
+.profile-image img{
+  width: 8vw;
+  /* background-color: antiquewhite; */
+  border-radius: 50%;
+}
+.first-name{
+  font-size: 26px;
+}
+.companyInfo{
+  color: rgb(166, 166, 166);
+  font-size: 20px;
+}
+.description{
+  color: rgb(112, 112, 112);
+  font-size: 14px;
+}
+/* .profile-bg {
+  position: absolute;
+  bottom: 3vw;
+  right: 3vw;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
+  width: calc(100% - 75px);
+  height: calc(100% - 110px);
+  z-index: -1;
+} */
+
+/* 
 
 .profile {
   animation: loadProfile 0.6s ease-in-out;
@@ -36,17 +102,7 @@
   max-width: 900px;
 }
 
-.profile-bg {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
-  width: calc(100% - 75px);
-  height: calc(100% - 110px);
-  z-index: -1;
-}
+
 
 .container {
   display: flex;
@@ -64,9 +120,7 @@
     inset 0 0px 120px var(--blue);
   width: 45%;
   flex: none;
-  /* background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fcute-girls&psig=AOvVaw20tBUBO-LRitUZ0ppS5-D-&ust=1673695873163000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMiI7o65xPwCFQAAAAAdAAAAABAE");
-  background-size: cover;
-  background-position: center; */
+  
 }
 
 .profile-image::before {
@@ -290,4 +344,4 @@ h1.second-name {
      transform: translateX(0px);
     opacity: 1;
   }
-}
+} */

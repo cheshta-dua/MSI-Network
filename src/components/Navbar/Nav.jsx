@@ -125,7 +125,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
 
             <div className="NavRight">
 
-                {window.location.pathname == "/Landing-page" ||window.location.pathname == "/profile" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
+                {window.location.pathname == "/Landing-page" ||window.location.pathname == "/chat" ||window.location.pathname == "/profile" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
@@ -154,7 +154,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                     <button className="button" onClick={login} hidden={vis}>
                         Login
                     </button>
-                    {user[0] &&<img src={user[0].picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}
+                    {user[0] &&<img src={user[0]?user[0].picture:user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}
 
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
                         <div className="navpbtn" onClick={()=>navigate('/profile')}>

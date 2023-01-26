@@ -6,7 +6,7 @@ const A_Card = (props) => {
     const [show, setShow] = useState(false);
 
     const { key, para } = props;
-    const { UserName, CurrentCompany, gitUrl = null, LinkdinID = null, email = null, ImageLink = null, Designation = null } = para;
+    const { UserName, CurrentCompany, gitUrl = null, LinkedinID = null, email = null, ImageLink = null, Designation = null } = para;
     useEffect(() => {
         if (email === null) {
             setShow(false);
@@ -41,7 +41,7 @@ const A_Card = (props) => {
                 <div class="userDetailsIcons">
                     {show ? <a href={"mailto:" + email}> <EmailIcon /> </a> : null}
                     {!show ?
-                        <div>  <a href={"http://" + LinkdinID}> <LinkedInIcon /></a></div>
+                        <div>  <a href={LinkedinID}> <LinkedInIcon /></a></div>
                         : null}
                 </div>
             </div>

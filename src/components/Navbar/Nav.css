@@ -19,7 +19,8 @@
     align-items: center;
     padding: 16px;
     /* position: fixed; */
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
 }
 
 /* clg logo */
