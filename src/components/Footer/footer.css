@@ -14,11 +14,11 @@
 
 .pageFooter a {
     padding: 4px;
-    color: white;
+    color: white !important;
 }
 
 .pageFooter a:hover {
-    color: rgb(223, 223, 223);
+    color: rgb(223, 223, 223) !important;
 }
 
 .map {
