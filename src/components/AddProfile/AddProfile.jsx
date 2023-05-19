@@ -144,11 +144,11 @@ const AddProfile = () => {
                         <tr>
                             <td>
                                 <label>
-                                    Past Education/schooling:
+                                    Schooling:
                                 </label>
                             </td>
                             <td>
-                            <input type="text" placeholder="where did you work in past?" value={User.Education} onChange={(e) =>setUser({...User,Education:e.target.value})}/>
+                            <input type="text" placeholder="where did you go to school?" value={User.Education} onChange={(e) =>setUser({...User,Education:e.target.value})}/>
                             </td>
                         </tr>
                         <tr>
@@ -158,7 +158,7 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                            <input type="url" placeholder="it will help other's contact you easily" value={User.LinkedinUrl} onChange={(e) => setUser({...User,LinkedinUrl:e.target.value})}/>
+                            <input type="url" placeholder="it will help others contact you easily" value={User.LinkedinUrl} onChange={(e) => setUser({...User,LinkedinUrl:e.target.value})}/>
                             </td>
                         </tr>
                         <tr>
@@ -168,7 +168,7 @@ const AddProfile = () => {
                                 </label>
                             </td>
                             <td>
-                            <input type="url" placeholder="it will help other's to know you" value={User.Description} onChange={(e) => setUser({...User,Description:e.target.value})}/>
+                            <input type="url" placeholder="it will help others to know you" value={User.Description} onChange={(e) => setUser({...User,Description:e.target.value})}/>
                             </td>
                         </tr>
                         <tr>
