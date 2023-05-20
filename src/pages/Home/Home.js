@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import ReachOut from "../../components/ReachOut/ReachForm";
 import Footer from "../../components/Footer/Footer";
 import Features from "../../components/Features/Features";
+import Path from "../../components/Path/Path";
 // import CollegeComp from "../../components/college/CollegeComp";
 import InstaPosts from "../../components/InstaPosts/Insta";
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
                 <div>
                     <Header />
                     <Features />
+                    <Path />
                     {/* <CollegeComp /> */}
                     <InstaPosts />
                     <ReachOut />
