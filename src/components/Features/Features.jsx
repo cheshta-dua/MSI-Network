@@ -83,7 +83,7 @@ const Features = () => {
                         </div>
                     </div>
 
-                    <div className="feature-card">
+                    <div className="feature-card" id="last-card">
                         <div className="feature-card-img">
                             <img src="images/updated.png" alt="illustration" />
                         </div>
