@@ -17,13 +17,7 @@
   --blue: #303090;
   --light-blue:#5b5bb5;
 }
-.profile-maincontainer{
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  margin-top: 3vw;
-}
+
 .profile {
   animation: loadProfile 0.6s ease-in-out;
   animation-fill-mode: both;
@@ -34,8 +28,10 @@
   align-items: center; */
   /* background-color: aliceblue; */
   height: 60vh;
-  max-height: 950px;
+  /* max-height: 950px; */
   max-width: 600px;
+  min-height: 450px;
+  min-width: 600px;
   box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
 }
 .container {
@@ -76,6 +72,14 @@
 .description{
   color: rgb(112, 112, 112);
   font-size: 14px;
+}
+.otherInfo h3{
+  font-size: 16px;
+  color: rgb(112, 112, 112);
+  text-align: left;
+}
+.otherInfo h3 span{
+  color: var(--blue);
 }
 /* .profile-bg {
   position: absolute;

@@ -73,6 +73,7 @@ const Login = () => {
                             onError={() => {
                                 console.log('Login Failed');
                             }}
+                            useOneTap
                         />
                     }
                 </div>

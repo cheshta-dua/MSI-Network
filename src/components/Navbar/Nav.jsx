@@ -157,7 +157,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                     {user[0] &&<img src={user[0]?user[0].picture:user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}
 
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div className="navpbtn" onClick={()=>navigate('/profile')}>
+                        <div className="navpbtn" onClick={()=>navigate(`/profile/${user[0].id}`)}>
                             Profile
                         </div>
                         <div className="LogoutBtn" onClick={() => logoutHandle()}  >

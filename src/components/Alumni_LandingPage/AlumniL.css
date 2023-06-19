@@ -22,6 +22,7 @@
     background-color: var(--blue);
     color: white;
 }
+
 @media only screen and (max-width: 900){
     .ChatIcon{
         width: 20vw;

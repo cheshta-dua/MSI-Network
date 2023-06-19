@@ -50,7 +50,7 @@ function App() {
         <Route path="/support" element={< Secure component = {SupportPage} />} />
         <Route path="/Achievers" element={< Secure component = {AchieversPage} />} />
         <Route path="/Societies" element={< Secure component = {SocietiesPage} />} />
-        <Route path="/profile" element={<Profile  />}/>
+        <Route path="/profile/:id" element={<Secure component = {Profile}  />}/>
       </Routes>
       <ToastContainer />
     </BrowserRouter>

@@ -1,0 +1,7 @@
+.profile-maincontainer{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+  }
