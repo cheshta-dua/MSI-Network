@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import PropTypes from 'prop-types';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 // import { data } from "../../Resorce/data";
 import SearchIcon from "@mui/icons-material/Search";
@@ -8,21 +8,21 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./Nav.css";
 
 
-const Nav = ({ dataChangefunc = "",data="" }) => {
+const Nav = ({ dataChangefunc = "", data = "" }) => {
     const navigate = useNavigate();
 
     // console.log('current URL 👉️', window.location.href);
     // console.log('current Pathname 👉️', window.location.pathname);
-    const[originalData,setOriginalData]=useState();
+    const [originalData, setOriginalData] = useState();
     const [user, setUser] = useState([]);
     const [vis, setVis] = useState(false);
     const [searchValue, setSearchValue] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
-    useEffect(()=>{
+    useEffect(() => {
         setOriginalData(data);
-        
-    },[]);
-    
+
+    }, []);
+
     const about = (e) => {
 
         e.preventDefault();
@@ -44,7 +44,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
         navigate('/');
         localStorage.removeItem('User');
         localStorage.removeItem('auth');
@@ -93,7 +93,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
         }
 
         if (FilterData.length != 0) {
-           
+
             dataChangefunc(FilterData);
         }
         else {
@@ -125,7 +125,7 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
 
             <div className="NavRight">
 
-                {window.location.pathname == "/Landing-page" ||window.location.pathname == "/chat" ||window.location.pathname == "/profile" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
+                {window.location.pathname == "/Landing-page" || window.location.pathname == "/chat" || window.location.pathname == "/profile" || window.location.pathname == "/faculty" || window.location.pathname == "/support" || window.location.pathname == "/Achievers" || window.location.pathname == "/Societies"
                     ? <div className="NavRight-Left">  {/*change its css and classname if required I just gave classname of below's div */}
                         <div className="links" onClick={() => navigate('/Landing-page')}>Alumni</div>
                         <div className="links" onClick={() => navigate('/Achievers')}>Achievers</div>
@@ -143,7 +143,9 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                     </div>
                     : <div className="NavRight-Left">
 
-                        <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
+                        {/* <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a> */}
+                        <a href="#Features" onClick={() => { logoClickHandle() }} className="links">Why join us</a>
+                        <a href="#Path" onClick={() => { logoClickHandle() }} className="links">How to join</a>
                         <a href="#InstaPosts" className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
                         <div className="links" onClick={about}>About Us</div>
                         <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
@@ -154,10 +156,10 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                     <button className="button" onClick={login} hidden={vis}>
                         Login
                     </button>
-                    {user[0] &&<img src={user[0]?user[0].picture:user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}
+                    {user[0] && <img src={user[0] ? user[0].picture : user.picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}
 
                     <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div className="navpbtn" onClick={()=>navigate(`/profile/${user[0].id}`)}>
+                        <div className="navpbtn" onClick={() => navigate(`/profile/${user[0].id}`)}>
                             Profile
                         </div>
                         <div className="LogoutBtn" onClick={() => logoutHandle()}  >
@@ -210,7 +212,9 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                                     Alumni
                                 </a> */}
 
-                                <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a>
+                                {/* <a href="#AbtClg" onClick={() => { logoClickHandle() }} className="links">About College</a> */}
+                                <a href="#Features" onClick={() => { logoClickHandle() }} className="links">Why join us</a>
+                                <a href="#Path" onClick={() => { logoClickHandle() }} className="links">How to join</a>
                                 <a href="#InstaPosts" className="links" onClick={() => { logoClickHandle() }}>Past Meets</a>
                                 <div className="links" onClick={about}>About Us</div>
                                 <a href="#ReachOut" onClick={() => { logoClickHandle() }} className="links">Reach Out</a>
@@ -224,9 +228,9 @@ const Nav = ({ dataChangefunc = "",data="" }) => {
                     <button className="button" onClick={login} hidden={vis}>
                         Login
                     </button>
-                    {user[0] &&<img src={user[0].picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}                    <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
-                        <div  onClick={()=>navigate('/profile')}>
-                           Profile
+                    {user[0] && <img src={user[0].picture} alt="user-avatar" hidden={!vis} height={"50px"} width={"50px"} />}                    <div className="logoutbtn" style={{ visibility: vis ? "visible" : "hidden" }}>
+                        <div onClick={() => navigate('/profile')}>
+                            Profile
                         </div>
                         <div className="LogoutBtn" onClick={() => logoutHandle()}  >
                             Log Out

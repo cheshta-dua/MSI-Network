@@ -40,7 +40,7 @@ const Features = () => {
         <>
             <Slide direction='up' triggerOnce cascade damping={0.9} duration={1000}>
                 <h1>Why join us?</h1>
-                <div className="features">
+                <div className="features" id="Features">
                     <div className="feature-card">
                         <div className="feature-card-txt">
                             <h3>

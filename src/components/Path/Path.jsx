@@ -5,7 +5,7 @@ const Path = () => {
     return (
         <>
             <Slide direction='up' triggerOnce duration={1000}>
-                <div className="path">
+                <div className="path" id="Path">
                     <h1> How to join us? </h1>
                     <div id="wrapper">
                         <div class="step-div">
