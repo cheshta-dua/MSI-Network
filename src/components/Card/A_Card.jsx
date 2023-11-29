@@ -22,7 +22,7 @@ const A_Card = (props) => {
  
     
     return <>
-        <div className="cardContainer" key={key} onClick={()=>navigate(`/profile/${para._id}`)}>
+        <div className="cardContainer" key={key} onClick={()=>window.location.pathname == "/faculty"? null :navigate(`/profile/${para._id}`)}>
             <div className="userImg">
                 <img src={ImageLink|| "images/dummy_profile.webp"} alt="alumnus" 
                     onError={(e) =>
