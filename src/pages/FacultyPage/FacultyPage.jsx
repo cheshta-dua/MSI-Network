@@ -9,7 +9,6 @@ const FacultyPage=()=>{
     },[]);
     return(
         <>
-        
         <Faculty />
         </>
     )
